@@ -286,7 +286,7 @@ ul {
 }
 
 .j_program_table_title_row {
-	background-image: linear-gradient(90deg, #51247a, #56247a 60%, #61257d 80%, #962a8b);
+	background-image: linear-gradient(90deg, #1a3a6b, #56247a 60%, #61257d 80%, #962a8b);
 	color: white;
 	border-top: 1px solid ;
 	border-left: 1px solid ;
@@ -480,7 +480,7 @@ ul {
 	position: absolute;
 	z-index: 999;
 	/* background-color: #00ffff; */
-	background-image: linear-gradient(90deg, #51247a, #56247a 60%, #61257d 80%, #962a8b);
+	background-image: linear-gradient(90deg, #1a3a6b, #56247a 60%, #61257d 80%, #962a8b);
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px grey;
 	max-width: 650px;
@@ -1316,7 +1316,7 @@ video {
 }
 
 .bg-uqStyle {
-	background-image: linear-gradient(90deg, #51247a, #56247a 60%, #61257d 80%, #962a8b)
+	background-image: linear-gradient(90deg, #1a3a6b, #56247a 60%, #61257d 80%, #962a8b)
 }
 
 .fill-current {
@@ -2008,7 +2008,7 @@ table thead tr th {
 }
 
 .article-post h2 {
-	color: #51247a;
+	color: #1a3a6b;
 	font-size: 1.5rem;
 	line-height: 2rem;
 	margin-top: 2.5rem
@@ -2392,7 +2392,7 @@ table thead tr th {
 	}
 
 	.md\:bg-uqStyle {
-		background-image: linear-gradient(90deg, #51247a, #56247a 60%, #61257d 80%, #962a8b)
+		background-image: linear-gradient(90deg, #1a3a6b, #56247a 60%, #61257d 80%, #962a8b)
 	}
 
 	.md\:px-7 {
@@ -2774,7 +2774,7 @@ table thead tr th {
 .ul_dot::before
 {
 	content: "\2022";
-	color: #51247a;
+	color: #1a3a6b;
 	font-weight: bold;
 	display: inline-block;
 	width: 1em;
