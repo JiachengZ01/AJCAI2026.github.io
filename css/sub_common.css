@@ -1224,12 +1224,12 @@ video {
 
 .border-mainPurple {
 	--tw-border-opacity: 1;
-	border-color: rgba(81, 36, 122, var(--tw-border-opacity))
+	border-color: rgba(26, 58, 107, var(--tw-border-opacity))
 }
 
 .border-b-mainPurple {
 	--tw-border-opacity: 1;
-	border-bottom-color: rgba(81, 36, 122, var(--tw-border-opacity))
+	border-bottom-color: rgba(26, 58, 107, var(--tw-border-opacity))
 }
 
 .bg-gray-100 {
@@ -1283,7 +1283,7 @@ video {
 
 .bg-mainPurple {
 	--tw-bg-opacity: 1;
-	background-color: rgba(81, 36, 122, var(--tw-bg-opacity))
+	background-color: rgba(26, 58, 107, var(--tw-bg-opacity))
 }
 
 .bg-gray-700 {
@@ -1658,7 +1658,7 @@ video {
 
 .text-mainPurple {
 	--tw-text-opacity: 1;
-	color: rgba(81, 36, 122, var(--tw-text-opacity))
+	color: rgba(26, 58, 107, var(--tw-text-opacity))
 }
 
 .text-white {
