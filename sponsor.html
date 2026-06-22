@@ -57,6 +57,43 @@
       max-width: 220px;
       object-fit: contain;
     }
+
+    .sponsor-text-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1a3a6b;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .sponsor-text-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .tier-platinum .sponsor-text-card {
+      border-left: 4px solid #50c878;
+      font-size: 1.25rem;
+    }
+
+    .tier-gold .sponsor-text-card {
+      border-left: 4px solid #d4a843;
+    }
+
+    .tier-bronze .sponsor-text-card {
+      border-left: 4px solid #b87333;
+    }
+
+    .tier-special .sponsor-text-card {
+      border-left: 4px solid #6366f1;
+    }
   </style>
 </head>
 
@@ -79,86 +116,35 @@
             <header class="px-0 sm:px-8">
 
               <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Sponsors</h2>
-              <p class="mb-4 text-gray-700">To be announced.</p>
-
-              <div style="display:none">
-              <div class="flex flex-row justify-center flex-wrap">
-                <h2 class="font-titleFont text-3xl"> We sincerely thank our sponsors for their unwavering support and
-                  generosity! </h2>
+              <div class="mb-6">
+                <p class="font-titleFont text-xl text-gray-600">We sincerely thank our sponsors for their generous support!</p>
               </div>
 
-              <h3 class="pt-9 mb-5 font-titleFont text-2xl text-mainPurple font-extrabold text-center">Gold Sponsors</h3>
-              <div class='flex flex-row justify-center flex-wrap mt-6'>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.anu.edu.au/" target="_blank" rel="noreferrer">
-                    <img src="./imgs/logo-anu.png" class="sponsor-logo" alt="ANU Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://about.google/intl/ALL_au/" target="_blank" rel="noreferrer">
-                    <img src="./imgs/logo_google.png" class="sponsor-logo" alt="Google Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.monash.edu/it/dsai" target="_blank" rel="noreferrer">
-                    <img src="./imgs/monash-logo-mono.svg" class="sponsor-logo" alt="Monash University Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://pioneer.au/" target="_blank" rel="noreferrer">
-                    <img src="./imgs/pioneer.png" class="sponsor-logo" alt="Pioneer Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.yepai.io/" target="_blank" rel="noreferrer">
-                    <img src="./imgs/yepai.png" class="sponsor-logo" alt="YePAI Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.csiro.au/" target="_blank" rel="noreferrer">
-                    <img src="./imgs/b8bc45d36fcd82e6b8335dc251501b6b.png" class="sponsor-logo" alt="CSIRO Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.acs.org.au" target="_blank" rel="noreferrer">
-                    <img src="./imgs/acs-logo.jpeg" class="sponsor-logo" alt="ACS Logo">
-                  </a>
-                </div>
+              <!-- Platinum Sponsors -->
+              <div class="flex flex-row items-center flex-wrap pt-6 tier-platinum">
+                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Platinum Sponsors</h3>
+                <div class="sponsor-text-card">Firmus</div>
+                <div class="sponsor-text-card">MainCode</div>
+                <div class="sponsor-text-card">Tourism New Zealand</div>
               </div>
 
-              <h3 class="pt-9 mb-5 font-titleFont text-2xl text-mainPurple font-extrabold text-center">Silver Sponsors</h3>
-              <div class='flex flex-row justify-center flex-wrap mt-6'>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.dairnet.com.au/" target="_blank" rel="noreferrer">
-                    <img src="./imgs/dairnet-logo.png" class="sponsor-logo" alt="DAIRNet Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://fome.ai/" target="_blank" rel="noreferrer">
-                    <img src="./imgs/Fomelogo.png" class="sponsor-logo" alt="Fome Logo">
-                  </a>
-                </div>
+              <!-- Gold Sponsors -->
+              <div class="flex flex-row items-center flex-wrap pt-6 tier-gold">
+                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Gold Sponsors</h3>
+                <div class="sponsor-text-card">Google</div>
+                <div class="sponsor-text-card">Tataki Auckland Unlimited</div>
               </div>
 
-              <h3 class="pt-9 mb-5 font-titleFont text-2xl text-mainPurple font-extrabold text-center">Bronze Sponsors</h3>
-              <div class='flex flex-row justify-center flex-wrap mt-6'>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.core.edu.au/home" target="_blank" rel="noreferrer">
-                    <img src="./imgs/core.png" class="sponsor-logo" alt="CORE Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.unsw.edu.au/unsw-ai" target="_blank" rel="noreferrer">
-                    <img src="./imgs/unsw_ai.png" class="sponsor-logo" alt="UNSW AI Institute Logo">
-                  </a>
-                </div>
-                <div class="sponsor-logo-container">
-                  <a href="https://www.springer.com/gp?srsltid=AfmBOooefCDzbh8wf37d-M3kosizgGgu2Vwbd4ZbJMVbJdSEJS25CZC8"
-                    target="_blank" rel="noreferrer">
-                    <img src="./imgs/springer-logo.png" class="sponsor-logo" alt="Springer Logo">
-                  </a>
-                </div>
+              <!-- Bronze Sponsors -->
+              <div class="flex flex-row items-center flex-wrap pt-6 tier-bronze">
+                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Bronze Sponsors</h3>
+                <div class="sponsor-text-card">AUT AI Research Centre</div>
               </div>
+
+              <!-- Best Paper Award Sponsor -->
+              <div class="flex flex-row items-center flex-wrap pt-6 tier-special">
+                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Best Paper Award Sponsor</h3>
+                <div class="sponsor-text-card">Springer</div>
               </div>
 
             </header>
