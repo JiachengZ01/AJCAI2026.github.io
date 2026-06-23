@@ -94,6 +94,40 @@
     .tier-special .sponsor-text-card {
       border-left: 4px solid #6366f1;
     }
+
+    .tier-supporting .sponsor-text-card {
+      border-left: 4px solid #1a3a6b;
+    }
+
+    .tier-platinum .sponsor-logo-container {
+      border-left: 4px solid #50c878;
+    }
+
+    .tier-gold .sponsor-logo-container {
+      border-left: 4px solid #d4a843;
+    }
+
+    .tier-bronze .sponsor-logo-container {
+      border-left: 4px solid #b87333;
+    }
+
+    .tier-special .sponsor-logo-container {
+      border-left: 4px solid #6366f1;
+    }
+
+    .tier-supporting .sponsor-logo-container {
+      border-left: 4px solid #1a3a6b;
+    }
+
+    a.sponsor-logo-container {
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    a.sponsor-logo-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
   </style>
 </head>
 
@@ -123,28 +157,47 @@
               <!-- Platinum Sponsors -->
               <div class="flex flex-row items-center flex-wrap pt-6 tier-platinum">
                 <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Platinum Sponsors</h3>
-                <div class="sponsor-text-card">Firmus</div>
-                <div class="sponsor-text-card">MainCode</div>
-                <div class="sponsor-text-card">Tourism New Zealand</div>
+                <a class="sponsor-logo-container" href="https://firmus.co/" target="_blank" rel="noreferrer">
+                  <img class="sponsor-logo" src="./imgs/sponsors/firmus.png" alt="Firmus" />
+                </a>
+                <a class="sponsor-logo-container" href="https://maincode.com/" target="_blank" rel="noreferrer">
+                  <img class="sponsor-logo" src="./imgs/sponsors/maincode.png" alt="MainCode" />
+                </a>
               </div>
 
               <!-- Gold Sponsors -->
               <div class="flex flex-row items-center flex-wrap pt-6 tier-gold">
                 <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Gold Sponsors</h3>
-                <div class="sponsor-text-card">Google</div>
-                <div class="sponsor-text-card">Tataki Auckland Unlimited</div>
+                <a class="sponsor-logo-container" href="https://www.google.com/" target="_blank" rel="noreferrer">
+                  <img class="sponsor-logo" src="./imgs/sponsors/google.png" alt="Google" />
+                </a>
               </div>
 
               <!-- Bronze Sponsors -->
               <div class="flex flex-row items-center flex-wrap pt-6 tier-bronze">
                 <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Bronze Sponsors</h3>
-                <div class="sponsor-text-card">AUT AI Research Centre</div>
+                <a class="sponsor-logo-container" href="https://airc.aut.ac.nz/" target="_blank" rel="noreferrer">
+                  <img class="sponsor-logo" src="./imgs/sponsors/aut.jpg" alt="AUT AI Research Centre" />
+                </a>
               </div>
 
               <!-- Best Paper Award Sponsor -->
               <div class="flex flex-row items-center flex-wrap pt-6 tier-special">
                 <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Best Paper Award Sponsor</h3>
-                <div class="sponsor-text-card">Springer</div>
+                <a class="sponsor-logo-container" href="https://www.springernature.com/" target="_blank" rel="noreferrer">
+                  <img class="sponsor-logo" src="./imgs/sponsors/springer.jpeg" alt="Springer" />
+                </a>
+              </div>
+
+              <!-- Supporting Organisations -->
+              <div class="flex flex-row items-center flex-wrap pt-6 tier-supporting">
+                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Supporting Organisations</h3>
+                <a class="sponsor-logo-container" href="https://www.tourismnewzealand.com/" target="_blank" rel="noreferrer">
+                  <img class="sponsor-logo" src="./imgs/sponsors/tourismNZ.jpg" alt="Tourism New Zealand" />
+                </a>
+                <a class="sponsor-logo-container" href="https://aucklandunlimited.com/" target="_blank" rel="noreferrer">
+                  <img class="sponsor-logo" src="./imgs/sponsors/tataki.jpg" alt="Tataki Auckland Unlimited" />
+                </a>
               </div>
 
             </header>
