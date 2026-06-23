@@ -46,7 +46,7 @@
         <header>
 
           <!-- Nav Bar -->
-          <iframe id='menu' src='./top_menu.html?v=2' frameborder='0' width='100%' height='64px' scrolling='auto'
+          <iframe id='menu' src='./top_menu.html?v=4' frameborder='0' width='100%' height='64px' scrolling='auto'
             style='z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
           <!-- End Of Nav Bar -->
 
@@ -58,86 +58,121 @@
             <header class="px-0 sm:px-7">
 
               <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Accommodation</h2>
-              <p class="mb-4 text-gray-700">To be announced.</p>
 
-              <div style="display:none">
-              <p class="mb-4">
-                Accommodation information will be announced closer to the conference. Please check back later.
+              <p class="mb-6 text-gray-700">
+                We provide a list of accommodation options in Auckland City. We have partnered with some hotels that have agreed to provide discounted rates for AJCAI 2026 delegates. All those options are close to the conference venue (under a 20-minute walk).
               </p>
 
               <style>
                 .hotel-card {
-                  display: flex;
-                  flex-direction: row;
                   background: #fff;
-                  border-radius: 16px;
-                  box-shadow: 0 2px 12px rgba(80, 40, 120, 0.08);
-                  margin-bottom: 2.5rem;
-                  overflow: hidden;
-                  align-items: stretch;
-                }
-
-                .hotel-img {
-                  width: 240px;
-                  min-width: 180px;
-                  height: 180px;
-                  object-fit: cover;
-                  background: #f3f0ff;
-                  display: block;
-                }
-
-                .hotel-info {
-                  flex: 1;
-                  padding: 1.5rem 2rem 1.5rem 2rem;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
+                  border-radius: 12px;
+                  box-shadow: 0 2px 10px rgba(26, 58, 107, 0.08);
+                  border: 1px solid #e6ecf5;
+                  padding: 1.4rem 1.8rem;
+                  margin-bottom: 1.5rem;
                 }
 
                 .hotel-title {
                   color: #1a3a6b;
-                  font-size: 1.4rem;
+                  font-size: 1.3rem;
                   font-weight: 700;
                   margin-bottom: 0.5rem;
                 }
 
                 .hotel-detail {
-                  margin-bottom: 0.3rem;
+                  margin-bottom: 0.4rem;
                   font-size: 1rem;
+                  color: #374151;
+                }
+
+                .hotel-detail .label {
+                  font-weight: 600;
+                  color: #1f2937;
+                  margin-right: 0.35rem;
                 }
 
                 .hotel-link {
-                  color: #2563eb;
-                  text-decoration: underline;
-                  margin-right: 1.5rem;
-                }
-
-                .hotel-discount {
+                  display: inline-block;
                   color: #1a3a6b;
+                  background: #e8f0fa;
+                  padding: 0.35rem 0.85rem;
+                  border-radius: 6px;
                   font-weight: 600;
-                  margin-left: 0.5rem;
+                  text-decoration: none;
+                  border: 1px solid #c8d8ee;
                 }
 
-                @media (max-width: 800px) {
-                  .hotel-card {
-                    flex-direction: column;
-                  }
+                .hotel-link:hover {
+                  background: #d6e4f5;
+                  text-decoration: underline;
+                }
 
-                  .hotel-img {
-                    width: 100%;
-                    height: 180px;
-                    min-width: 0;
-                  }
+                .hotel-code {
+                  display: inline-block;
+                  margin-left: 0.6rem;
+                  padding: 0.25rem 0.7rem;
+                  background: #fff7e0;
+                  border: 1px dashed #c9a227;
+                  border-radius: 6px;
+                  color: #6b5106;
+                  font-family: monospace;
+                  font-weight: 700;
+                }
 
-                  .hotel-info {
-                    padding: 1.2rem;
-                  }
+                .hotel-note {
+                  display: block;
+                  margin-top: 0.5rem;
+                  font-size: 0.9em;
+                  color: #6b7280;
+                  font-style: italic;
                 }
               </style>
 
-              <!-- Hotels to be announced -->
-              <div class="flex flex-col gap-8">
-              </div>
+              <div class="flex flex-col">
+
+                <div class="hotel-card">
+                  <div class="hotel-title">Cordis Auckland</div>
+                  <div class="hotel-detail"><span class="label">Address:</span>83 Symonds Street, Grafton, Auckland 1010</div>
+                  <div class="hotel-detail">
+                    <a class="hotel-link" href="https://reservation.brilliantbylangham.com/?_gl=1*q8sdyx*_gcl_au*MjAxODk0MzA4NS4xNzYyNzM0NTM1&adobe_mc=MCMID%3D70275572546813670101575384524250706909%7CMCORGID%3D085C2C1653DB0FFF0A490D4B%2540AdobeOrg%7CTS%3D1762890981&adult=1&arrive=2026-06-24&chain=10316&child=0&config=brilliant&currency=NZD&depart=2026-06-25&hotel=27424&level=hotel&locale=en-US&productcurrency=NZD&promo=O55ERSS%40!5%23*&rooms=1&theme=brilliant" target="_blank" rel="noreferrer">Book at Cordis Auckland</a>
+                  </div>
+                </div>
+
+                <div class="hotel-card">
+                  <div class="hotel-title">Four Points by Sheraton Auckland</div>
+                  <div class="hotel-detail"><span class="label">Address:</span>396 Queen Street, Main Reception Entrance 110 Mayoral Drive, Auckland 1010</div>
+                  <div class="hotel-detail">
+                    <a class="hotel-link" href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1779079400130&key=CORP&app=resvlink" target="_blank" rel="noreferrer">Book your corporate rate for AJCAI 2026</a>
+                  </div>
+                </div>
+
+                <div class="hotel-card">
+                  <div class="hotel-title">Pullman Hotel</div>
+                  <div class="hotel-detail"><span class="label">Address:</span>Corner Waterloo Quadrant &amp; Princes Street, Auckland 1010</div>
+                  <div class="hotel-detail">
+                    <a class="hotel-link" href="https://all.accor.com/booking/en/accor/hotel/8219?dateIn=2026-11-20&compositions=1&stayplus=false&snu=false&accessibleRooms=false&hideWDR=false&productCode=null&hideHotelDetails=true&utm_campaign=hotel_website_search&_gl=1*1isg8h8*_ga*MTI4NTk5OTEwNS4xNzU1NzQyMDAw*_ga_ZXNP5ZN9JW*czE3NTU3NDE5OTkkbzEkZzAkdDE3NTU3NDE5OTkkajYwJGwwJGgw*_ga_DHYMH7NRSD*czE3NTU3NDIwMDEkbzEkZzAkdDE3NTU3NDIwMDEkajYwJGwwJGgw*_ga_RE4802WZRN*czE3NzgxMjc3NDUkbzEkZzEkdDE3NzgxMjc5ODEkajYwJGwwJGgw&utm_medium=accor_regional_websites&_ga=2.24287802.1091294739.1779078922-805437533.1779078922&utm_source=hotelwebsite_8219&dateOut=2026-12-06&basketId=22edf55b-d120-4c29-aeae-a9e872de8b3d" target="_blank" rel="noreferrer">Special accommodation rate for AJCAI 2026</a>
+                    <span class="hotel-code">Code: AKSCF7</span>
+                  </div>
+                  <span class="hotel-note">Please pass on the code as it appears to drop off the link after a certain time period.</span>
+                </div>
+
+                <div class="hotel-card">
+                  <div class="hotel-title">Grand Millennium Auckland</div>
+                  <div class="hotel-detail"><span class="label">Address:</span>71 Mayoral Drive, Cnr Vincent Street, Auckland 1010</div>
+                  <div class="hotel-detail">
+                    <a class="hotel-link" href="https://www.millenniumhotels.com/en/bookings/?hotelcode=14674&checkin=2026-11-20&checkout=2026-12-06&discountcode=&groupcode=&promocode=AJCAI2026&adults=1&children=0&rooms=1&AAA=false&AARP=false&GOV=false&Accessible=true&noPromo=false&hasCode=false&offername=&offercode=&viewrates=Rooms" target="_blank" rel="noreferrer">Book at Grand Millennium Auckland</a>
+                  </div>
+                </div>
+
+                <div class="hotel-card">
+                  <div class="hotel-title">Copthorne Auckland City</div>
+                  <div class="hotel-detail"><span class="label">Address:</span>150 Anzac Avenue, Auckland CBD, Auckland 1010</div>
+                  <div class="hotel-detail">
+                    <a class="hotel-link" href="https://www.millenniumhotels.com/en/bookings/?city=auckland&hotelcode=13510&checkin=2026-11-20&checkout=2026-12-06&promocode=AJCAI2026&discountcode=&groupcode=&AAA=false&AARP=false&GOV=false&Accessible=true&adults=1&children=0&rooms=1&childrenAges=&viewrates=rooms" target="_blank" rel="noreferrer">Book at Copthorne Auckland City</a>
+                  </div>
+                </div>
+
               </div>
 
             </header>

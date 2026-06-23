@@ -51,7 +51,7 @@
         <header>
 
           <!-- Nav Bar -->
-          <iframe id='menu' src='./top_menu.html?v=2' frameborder='0' width='100%' height='64px' scrolling='auto'
+          <iframe id='menu' src='./top_menu.html?v=4' frameborder='0' width='100%' height='64px' scrolling='auto'
             style='z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
           <!-- End Of Nav Bar -->
 
@@ -63,7 +63,165 @@
             <header class="px-0 sm:px-7">
 
               <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Program</h2>
-              <p class="mb-4 text-gray-700">To be announced.</p>
+
+              <p class="mb-4 text-gray-700">
+                The table below provides a high-level overview of the conference programme. A detailed session-by-session schedule will be published closer to the conference.
+              </p>
+
+              <style>
+                .overview-wrapper {
+                  overflow-x: auto;
+                  margin-bottom: 2rem;
+                  border-radius: 8px;
+                  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                }
+
+                table.programme-overview {
+                  width: 100%;
+                  min-width: 760px;
+                  border-collapse: collapse;
+                  background: #ffffff;
+                  font-size: 0.95rem;
+                }
+
+                table.programme-overview thead th {
+                  background: #1a3a6b;
+                  color: #ffffff;
+                  font-weight: 700;
+                  padding: 12px 10px;
+                  text-align: center;
+                  border: 1px solid #1a3a6b;
+                  white-space: nowrap;
+                }
+
+                table.programme-overview thead th .day-date {
+                  display: block;
+                  font-size: 0.8em;
+                  font-weight: 500;
+                  opacity: 0.9;
+                  margin-top: 2px;
+                }
+
+                table.programme-overview tbody td {
+                  border: 1px solid #e0e0e0;
+                  padding: 12px 10px;
+                  text-align: center;
+                  vertical-align: middle;
+                  line-height: 1.4;
+                }
+
+                table.programme-overview tbody td.session {
+                  background: #ffffff;
+                  color: #1f2937;
+                  font-weight: 500;
+                }
+
+                table.programme-overview tbody td.break {
+                  background: #e8f0fa;
+                  color: #1a3a6b;
+                  font-style: italic;
+                  font-weight: 600;
+                }
+
+                table.programme-overview tbody td.evening {
+                  background: #d6e4f5;
+                  color: #1a3a6b;
+                  font-weight: 700;
+                }
+
+                table.programme-overview tbody td.empty {
+                  background: #f7f7f7;
+                  color: #b0b0b0;
+                }
+
+                table.programme-overview tbody td .time {
+                  display: block;
+                  font-size: 0.82em;
+                  color: #4b5563;
+                  font-weight: 600;
+                  margin-bottom: 2px;
+                }
+
+                table.programme-overview tbody td .sublist {
+                  display: block;
+                  font-size: 0.85em;
+                  color: #374151;
+                  margin-top: 3px;
+                  font-weight: 400;
+                }
+              </style>
+
+              <div class="overview-wrapper">
+                <table class="programme-overview">
+                  <thead>
+                    <tr>
+                      <th>Thursday<span class="day-date">26 Nov</span></th>
+                      <th>Friday<span class="day-date">27 Nov</span></th>
+                      <th>Saturday<span class="day-date">28 Nov</span></th>
+                      <th>Sunday<span class="day-date">29 Nov</span></th>
+                      <th>Monday<span class="day-date">30 Nov</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="empty">&mdash;</td>
+                      <td class="session"><span class="time">08:00 &ndash; 09:00</span>Registration<span class="sublist">09:00 &ndash; 10:00 &middot; Workshop, Tutorial &amp; Encore Track</span></td>
+                      <td class="session"><span class="time">08:00 &ndash; 09:00</span>Registration<span class="sublist">09:00 &ndash; 10:00 &middot; Keynote</span></td>
+                      <td class="session"><span class="time">08:00 &ndash; 09:00</span>Registration<span class="sublist">09:00 &ndash; 10:00 &middot; Keynote</span></td>
+                      <td class="session"><span class="time">08:00 &ndash; 09:00</span>Registration<span class="sublist">09:00 &ndash; 10:00 &middot; Keynote</span></td>
+                    </tr>
+                    <tr>
+                      <td class="empty">&mdash;</td>
+                      <td class="break">Morning Tea</td>
+                      <td class="break">Morning Tea</td>
+                      <td class="break">Morning Tea</td>
+                      <td class="break">Morning Tea</td>
+                    </tr>
+                    <tr>
+                      <td class="empty">&mdash;</td>
+                      <td class="session">Workshop, Tutorial &amp; Encore Track</td>
+                      <td class="session">Breakout Tracks</td>
+                      <td class="session">Breakout Tracks<span class="sublist">Industry Talks</span></td>
+                      <td class="session">Breakout Tracks</td>
+                    </tr>
+                    <tr>
+                      <td class="empty">&mdash;</td>
+                      <td class="break">Break</td>
+                      <td class="break">Lunch</td>
+                      <td class="break">Lunch</td>
+                      <td class="break">Lunch</td>
+                    </tr>
+                    <tr>
+                      <td class="session"><span class="time">14:00 &ndash; 16:00</span>Registration</td>
+                      <td class="session">Workshop, Tutorial &amp; Encore Track</td>
+                      <td class="session">Keynote<span class="sublist">Breakout Tracks</span></td>
+                      <td class="session">Keynote</td>
+                      <td class="session">Keynote<span class="sublist">Breakout Tracks</span></td>
+                    </tr>
+                    <tr>
+                      <td class="empty">&mdash;</td>
+                      <td class="break">Afternoon Tea</td>
+                      <td class="break">Afternoon Tea</td>
+                      <td class="session">Breakout Tracks<span class="sublist">Industry Talks &middot; AI Highlight</span></td>
+                      <td class="empty">&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td class="empty">&mdash;</td>
+                      <td class="session">Workshop, Tutorial &amp; Encore Track</td>
+                      <td class="session">Breakout Tracks<span class="sublist">Responsible AI &middot; PhD Forum</span></td>
+                      <td class="break">Industry Networking<span class="sublist">Afternoon Tea</span></td>
+                      <td class="empty">&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td class="empty">&mdash;</td>
+                      <td class="empty">&mdash;</td>
+                      <td class="evening">Welcome Reception</td>
+                      <td class="evening">Conference Banquet</td>
+                      <td class="empty">&mdash;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
               <div style="display:none">
               <style>

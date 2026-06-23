@@ -32,67 +32,39 @@
 
   <script type="text/javascript">
     window.onload = function () {
-      changeMobileMenu('sponsor');
+      changeMobileMenu('visa');
     }
   </script>
 
   <title data-react-helmet="true">AJCAI 2026 - Auckland, New Zealand</title>
 
   <style>
-    .sponsor-logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 140px;
-      width: 240px;
-      margin: 10px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 10px;
+    .visa-section {
+      margin-bottom: 2rem;
     }
 
-    .sponsor-logo {
-      max-height: 120px;
-      max-width: 220px;
-      object-fit: contain;
-    }
-
-    .sponsor-text-card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 10px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px 32px;
-      font-size: 1.1rem;
-      font-weight: 600;
+    .visa-section h3 {
       color: #1a3a6b;
-      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
     }
 
-    .sponsor-text-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    .visa-section p {
+      color: #374151;
+      line-height: 1.55;
+      margin-bottom: 0.8rem;
     }
 
-    .tier-platinum .sponsor-text-card {
-      border-left: 4px solid #50c878;
-      font-size: 1.25rem;
+    .visa-section a {
+      color: #1a3a6b;
+      text-decoration: underline;
+      font-weight: 600;
     }
 
-    .tier-gold .sponsor-text-card {
-      border-left: 4px solid #d4a843;
-    }
-
-    .tier-bronze .sponsor-text-card {
-      border-left: 4px solid #b87333;
-    }
-
-    .tier-special .sponsor-text-card {
-      border-left: 4px solid #6366f1;
+    .visa-section a:hover {
+      color: #2563eb;
     }
   </style>
 </head>
@@ -113,38 +85,35 @@
         </div>
         <main class="w-full">
           <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
-            <header class="px-0 sm:px-8">
+            <header class="px-0 sm:px-7">
 
-              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Sponsors</h2>
-              <div class="mb-6">
-                <p class="font-titleFont text-xl text-gray-600">We sincerely thank our sponsors for their generous support!</p>
+              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Visa Information</h2>
+
+              <div class="visa-section">
+                <h3>Visas &amp; Immigration</h3>
+                <p>
+                  Some people including citizens of visa waiver countries can travel to New Zealand with an NZ Electronic Travel Authority (NZeTA) instead of a visa.
+                </p>
+                <p>
+                  People travelling on a passport from some countries must apply for a Visitor Visa to visit New Zealand.
+                </p>
+                <p>
+                  Visa information is available from Immigration New Zealand (INZ):<br>
+                  <a href="https://www.immigration.govt.nz/" target="_blank" rel="noreferrer">https://www.immigration.govt.nz/</a>
+                </p>
+                <p>
+                  Visitors from visa-waiver countries must request an Electronic Travel Authority (ETA) before coming to New Zealand. You may also have to pay an International Visitor Conservation and Tourism Levy (IVL). For more information on the ETA and IVL, visit <a href="https://www.immigration.govt.nz/" target="_blank" rel="noreferrer">Immigration New Zealand</a>.
+                </p>
               </div>
 
-              <!-- Platinum Sponsors -->
-              <div class="flex flex-row items-center flex-wrap pt-6 tier-platinum">
-                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Platinum Sponsors</h3>
-                <div class="sponsor-text-card">Firmus</div>
-                <div class="sponsor-text-card">MainCode</div>
-                <div class="sponsor-text-card">Tourism New Zealand</div>
-              </div>
-
-              <!-- Gold Sponsors -->
-              <div class="flex flex-row items-center flex-wrap pt-6 tier-gold">
-                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Gold Sponsors</h3>
-                <div class="sponsor-text-card">Google</div>
-                <div class="sponsor-text-card">Tataki Auckland Unlimited</div>
-              </div>
-
-              <!-- Bronze Sponsors -->
-              <div class="flex flex-row items-center flex-wrap pt-6 tier-bronze">
-                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Bronze Sponsors</h3>
-                <div class="sponsor-text-card">AUT AI Research Centre</div>
-              </div>
-
-              <!-- Best Paper Award Sponsor -->
-              <div class="flex flex-row items-center flex-wrap pt-6 tier-special">
-                <h3 class="font-titleFont text-2xl text-mainPurple font-extrabold mr-6 my-2" style="min-width:220px">Best Paper Award Sponsor</h3>
-                <div class="sponsor-text-card">Springer</div>
+              <div class="visa-section">
+                <h3>Visa Invitation Letter</h3>
+                <p>
+                  Visa letters of invitation can be issued only to attendees who have registered for the conference and have paid for their registration. You could request your visa invitation letter during the registration process or by emailing <a href="mailto:AJCAI2026_registration@auckland.ac.nz">AJCAI2026_registration@auckland.ac.nz</a> after completing your conference registration.
+                </p>
+                <p>
+                  The Conference cannot contact or intervene with any INZ on your behalf, so please register early and begin your visa application process as early as possible.
+                </p>
               </div>
 
             </header>
@@ -152,9 +121,6 @@
         </main>
         <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
           <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
-            <div class="flex flex-col py-2 px-6 lg:px-0">
-              <!-- Sponsors section is currently commented out -->
-            </div>
             <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
               <small class="">AJCAI 2026 - Australasian Joint Conference on Artificial Intelligence 2026, Auckland,
                 New Zealand</small>
@@ -180,9 +146,6 @@
     }
   </script>
   <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/";/*]]>*/</script>
-  <script id="gatsby-chunk-mapping">
-    /*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-1c9788fca0f90abb50c3.js"], "app": ["/app-a59b4b6740a68aeefd26.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-3d51b459a80f969a4f66.js"], "component---src-pages-gather-town-js": ["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"], "component---src-pages-organisation-js": ["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"], "component---src-pages-phd-school-js": ["/component---src-pages-phd-school-js-342a122469920c419385.js"], "component---src-pages-program-at-a-glance-js": ["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"], "component---src-pages-program-js": ["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"], "component---src-pages-sponsors-js": ["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"], "component---src-templates-article-js": ["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"] };/*]]>*/
-  </script>
   <script>
     function show_mobile_nav() {
       var current_class = document.getElementById('mobile_menu').className;
