@@ -312,12 +312,14 @@ function mobile_menu_shift(key)
     const sectionMain = document.getElementById('mobile_menu_section_main');
     const sectionAttending = document.getElementById('mobile_menu_section_attending');
     const sectionCFS = document.getElementById('mobile_menu_section_cfs');
+    const sectionProgram = document.getElementById('mobile_menu_section_program');
     const maxHeight = window.innerHeight - 64 + 'px';
     switch(key) {
         case 0: {
             sectionMain.setAttribute('style', `visibility: visible; max-height: ${maxHeight};`);
             sectionAttending.setAttribute('style', 'display: none;');
             sectionCFS.setAttribute('style', 'display: none;');
+            sectionProgram.setAttribute('style', 'display: none;');
             break;
         }
 
@@ -325,6 +327,7 @@ function mobile_menu_shift(key)
             sectionMain.setAttribute('style', 'display: none;');
             sectionAttending.setAttribute('style', `visibility: visible; max-height: ${maxHeight};`);
             sectionCFS.setAttribute('style', 'display: none;');
+            sectionProgram.setAttribute('style', 'display: none;');
             break;
         }
 
@@ -332,6 +335,15 @@ function mobile_menu_shift(key)
             sectionMain.setAttribute('style', 'display: none;');
             sectionAttending.setAttribute('style', 'display: none;');
             sectionCFS.setAttribute('style', `visibility: visible; max-height: ${maxHeight};`);
+            sectionProgram.setAttribute('style', 'display: none;');
+            break;
+        }
+
+        case 3: {
+            sectionMain.setAttribute('style', 'display: none;');
+            sectionAttending.setAttribute('style', 'display: none;');
+            sectionCFS.setAttribute('style', 'display: none;');
+            sectionProgram.setAttribute('style', `visibility: visible; max-height: ${maxHeight};`);
             break;
         }
     }
@@ -381,6 +393,8 @@ function extentIframe()
                 sectionAttending.style.maxHeight = window.innerHeight - 64 + 'px';
                 const sectionCFS = iframe.contentWindow.document.getElementById('mobile_menu_section_cfs');
                 sectionCFS.style.maxHeight = window.innerHeight - 64 + 'px';
+                const sectionProgram = iframe.contentWindow.document.getElementById('mobile_menu_section_program');
+                sectionProgram.style.maxHeight = window.innerHeight - 64 + 'px';
             }
         }, 250);
     }
