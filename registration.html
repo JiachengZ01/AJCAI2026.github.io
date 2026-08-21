@@ -95,6 +95,72 @@
                   line-height: 1.5;
                 }
 
+                .reg-notice p + p {
+                  margin-top: 0.6rem;
+                }
+
+                .reg-notice ul {
+                  list-style: none;
+                  margin: 0.45rem 0 0;
+                  padding: 0;
+                  font-size: 1rem;
+                  line-height: 1.5;
+                }
+
+                .reg-notice ul > li {
+                  position: relative;
+                  padding-left: 1.1rem;
+                  margin-bottom: 0.25rem;
+                }
+
+                .reg-notice ul > li::before {
+                  content: "";
+                  position: absolute;
+                  left: 0.15rem;
+                  top: 0.6rem;
+                  width: 0.35rem;
+                  height: 0.35rem;
+                  border-radius: 50%;
+                  background: #c9a227;
+                }
+
+                .reg-cta {
+                  display: flex;
+                  justify-content: center;
+                  margin: 1.6rem 0 2rem;
+                }
+
+                .reg-cta-btn {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 0.55rem;
+                  background-image: linear-gradient(90deg, #1a3a6b, #56247a 60%, #962a8b);
+                  color: #fff;
+                  font-family: Montserrat, system-ui, sans-serif;
+                  font-weight: 700;
+                  font-size: 1.05rem;
+                  letter-spacing: 0.01em;
+                  padding: 0.85rem 2.2rem;
+                  border-radius: 999px;
+                  text-decoration: none;
+                  box-shadow: 0 4px 14px rgba(26, 58, 107, 0.28);
+                  transition: transform 0.15s ease, box-shadow 0.15s ease;
+                }
+
+                .reg-cta-btn:hover,
+                .reg-cta-btn:focus {
+                  color: #fff;
+                  text-decoration: none;
+                  transform: translateY(-2px);
+                  box-shadow: 0 6px 18px rgba(26, 58, 107, 0.35);
+                }
+
+                .reg-cta-btn svg {
+                  width: 1.1rem;
+                  height: 1.1rem;
+                  flex: none;
+                }
+
                 .reg-table-wrap {
                   overflow-x: auto;
                   border: 1px solid #e6ecf5;
@@ -344,10 +410,32 @@
                   <line x1="12" y1="9" x2="12" y2="13" />
                   <line x1="12" y1="17" x2="12.01" y2="17" />
                 </svg>
-                <p>
-                  <strong>Each accepted paper must be covered by a separate registration</strong> &mdash; either a
-                  full/student registration, or the Additional Paper add-on within a full/student registration.
-                </p>
+                <div>
+                  <p>
+                    <strong>Each accepted paper must be covered by a separate registration.</strong> This can be
+                    either:
+                  </p>
+                  <ul>
+                    <li>a Full or Student &ndash; Author registration; or</li>
+                    <li>an Additional Paper add-on purchased with a Full or Student &ndash; Author registration.</li>
+                  </ul>
+                  <p>
+                    To have your paper included in the conference proceedings, you must complete the required
+                    registration by <strong>5 October 2026</strong> (New Zealand Time).
+                  </p>
+                </div>
+              </div>
+
+              <div class="reg-cta">
+                <a class="reg-cta-btn" href="https://auckland.cventevents.com/MQK1mX" target="_blank"
+                  rel="noreferrer">
+                  Click here to register
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
               </div>
 
               <h3 class="mt-2 mb-3 font-titleFont text-2xl text-mainPurple font-extrabold">Registration Fees</h3>
@@ -373,6 +461,16 @@
                       <td>NZD 900</td>
                     </tr>
                     <tr>
+                      <td class="reg-row-label">Full Registration &ndash; Author <span
+                          style="font-weight:400; color:#6b7280;">(register by 5 Oct, 2026)</span></td>
+                      <td class="reg-single-day" colspan="2">NZD 1,250</td>
+                    </tr>
+                    <tr>
+                      <td class="reg-row-label">Student Registration &ndash; Author <span
+                          style="font-weight:400; color:#6b7280;">(register by 5 Oct, 2026)</span></td>
+                      <td class="reg-single-day" colspan="2">NZD 800</td>
+                    </tr>
+                    <tr>
                       <td class="reg-row-label">Single Day &ndash; Workshops &amp; Tutorials only (27 Nov)</td>
                       <td class="reg-single-day" colspan="2">NZD 350</td>
                     </tr>
@@ -394,8 +492,8 @@
                     </tr>
                     <tr>
                       <td class="reg-row-label">Additional Paper <span
-                          style="font-weight:400; color:#6b7280;">(add-on within a full/student
-                          registration)</span></td>
+                          style="font-weight:400; color:#6b7280;">(add-on purchased with a Full or Student &ndash;
+                          Author registration)</span></td>
                       <td class="reg-single-day" colspan="2">NZD 800</td>
                     </tr>
                   </tbody>
@@ -463,6 +561,18 @@
                 </div>
               </div>
 
+              <div class="reg-cta">
+                <a class="reg-cta-btn" href="https://auckland.cventevents.com/MQK1mX" target="_blank"
+                  rel="noreferrer">
+                  Click here to register
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+
               <h3 class="mt-6 mb-3 font-titleFont text-2xl text-mainPurple font-extrabold">Important Notes</h3>
 
               <div class="reg-note-card">
@@ -471,8 +581,8 @@
               </div>
 
               <div class="reg-note-card">
-                <div class="reg-note-title">Oral Presentation Policy</div>
-                <p>Oral presenters must complete their registration by 31 October 2026 for their papers to be
+                <div class="reg-note-title">Paper Presentation Policy</div>
+                <p>Authors must complete their registration by 5 October 2026 for their papers to be
                   included in the final conference programme.</p>
               </div>
 
