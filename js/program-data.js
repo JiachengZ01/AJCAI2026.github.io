@@ -1,4 +1,4 @@
-// Programme supplied in files/AJCAI-2026-Programme-updated_2.html.
+// Programme supplied in files/AJCAI-2026-Programme-updated_3.html.
 window.PROGRAMME = {
   "conference": "AJCAI 2026",
   "dates": "26–30 November 2026",
@@ -450,7 +450,7 @@ window.PROGRAMME = {
       "type": "oral",
       "start": "10:30",
       "end": "12:10",
-      "room": "260-057",
+      "room": "260-005",
       "chair": "",
       "title": "Oral 2 · Adaptive Learning, Scientific and Environmental AI",
       "date": "2026-11-28",
@@ -512,7 +512,7 @@ window.PROGRAMME = {
       "type": "oral",
       "start": "10:30",
       "end": "12:10",
-      "room": "260-073",
+      "room": "260-057",
       "chair": "",
       "title": "Oral 1 · Computer Vision: Detection, Reconstruction and Reasoning",
       "date": "2026-11-28",
@@ -607,7 +607,7 @@ window.PROGRAMME = {
       "type": "oral",
       "start": "14:10",
       "end": "15:30",
-      "room": "260-073",
+      "room": "260-057",
       "chair": "",
       "title": "Oral 3 · LLM Agents: Safety and Action Reliability",
       "date": "2026-11-28",
@@ -1041,9 +1041,9 @@ window.PROGRAMME = {
       "type": "oral",
       "start": "10:30",
       "end": "11:30",
-      "room": "260-073",
+      "room": "260-055",
       "chair": "",
-      "title": "Oral 4 · Efficient Foundation Models",
+      "title": "Oral 4 · Reliable and Efficient Model Evaluation",
       "date": "2026-11-29",
       "papers": [
         {
@@ -1067,8 +1067,8 @@ window.PROGRAMME = {
           "talk_end": "11:10"
         },
         {
-          "number": "51",
-          "title": "Render or Retain: Failure-Aware Optical Compression for Black-Box VLMs",
+          "number": "132",
+          "title": "Reliable Individual Fairness Evaluation through Coverage, Metric Agreement, and Model Stability",
           "acceptance": "oral",
           "order": 3,
           "poster_session_id": "poster-2",
@@ -1083,14 +1083,14 @@ window.PROGRAMME = {
       "type": "oral",
       "start": "14:00",
       "end": "15:00",
-      "room": "260-073",
+      "room": "260-055",
       "chair": "",
-      "title": "Oral 5 · Human-Centred AI: Health and Fairness",
+      "title": "Oral 5 · Multimodal and Health AI",
       "date": "2026-11-29",
       "papers": [
         {
-          "number": "98",
-          "title": "Deep Learning with Multimodal Fusion for Early Prediction of Sleep Apnea Events",
+          "number": "51",
+          "title": "Render or Retain: Failure-Aware Optical Compression for Black-Box VLMs",
           "acceptance": "oral",
           "order": 1,
           "poster_session_id": "poster-2",
@@ -1099,8 +1099,8 @@ window.PROGRAMME = {
           "talk_end": "14:20"
         },
         {
-          "number": "144",
-          "title": "Outcome-Conditioned Care Pathway Synthesis: A Benchmark of Generative Sequence Models on Clinical Event Logs",
+          "number": "98",
+          "title": "Deep Learning with Multimodal Fusion for Early Prediction of Sleep Apnea Events",
           "acceptance": "oral",
           "order": 2,
           "poster_session_id": "poster-2",
@@ -1109,8 +1109,8 @@ window.PROGRAMME = {
           "talk_end": "14:40"
         },
         {
-          "number": "132",
-          "title": "Reliable Individual Fairness Evaluation through Coverage, Metric Agreement, and Model Stability",
+          "number": "144",
+          "title": "Outcome-Conditioned Care Pathway Synthesis: A Benchmark of Generative Sequence Models on Clinical Event Logs",
           "acceptance": "oral",
           "order": 3,
           "poster_session_id": "poster-2",
@@ -1337,7 +1337,7 @@ window.PROGRAMME = {
           "acceptance": "oral",
           "order": 7,
           "poster_session_id": "poster-2",
-          "oral_session_id": "oral-2",
+          "oral_session_id": "oral-7",
           "cluster": "Efficient and Reliable Foundation Models"
         },
         {
@@ -1535,7 +1535,7 @@ window.PROGRAMME = {
           "acceptance": "oral",
           "order": 29,
           "poster_session_id": "poster-2",
-          "oral_session_id": "oral-7",
+          "oral_session_id": "oral-2",
           "cluster": "Graphs, Recommendation and Social AI"
         },
         {
