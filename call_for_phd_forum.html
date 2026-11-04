@@ -34,9 +34,9 @@
 
   <script type="text/javascript">
     window.onload = function () {
-      // Guard against a browser-cached copy of top_menu.html that predates the
-      // 'callForPhdForum' id (it used to be mislabelled 'callForIndustryDay').
+      // Highlight both navigation entries, allowing for a cached older menu.
       try { changeMobileMenu('callForPhdForum'); } catch (e) { }
+      try { changeMobileMenu('phdForum'); } catch (e) { }
     }
   </script>
 
@@ -50,7 +50,7 @@
         <header>
 
           <!-- Nav Bar -->
-          <iframe id='menu' src='./top_menu.html?v=4' frameborder='0' width='100%' height='64px' scrolling='auto'
+          <iframe id='menu' src='./top_menu.html?v=5' frameborder='0' width='100%' height='64px' scrolling='auto'
             style='z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
           <!-- End Of Nav Bar -->
 

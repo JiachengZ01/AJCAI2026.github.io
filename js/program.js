@@ -92,14 +92,16 @@
         const duration = minutes(session.end) - minutes(session.start);
         const meta = session.papers.length
           ? `${session.papers.length} ${session.type === 'poster' ? 'posters' : 'papers'}${session.type === 'oral' ? ' · 20 min each' : ''}`
-          : session.agenda
-            ? session.agenda.filter(item => item.role).map(item => item.speaker).join(' · ')
-            : labels[session.type];
+          : session.presenters?.length
+            ? `Presenters · ${session.presenters.join(', ')}`
+            : session.agenda
+              ? session.agenda.filter(item => item.role).map(item => item.speaker).join(' · ')
+              : labels[session.type];
         html += `
           <button class="programme-session ${escape(session.type)} ${duration <= 30 ? 'compact' : ''}"
             type="button" data-session="${escape(session.id)}" id="${escape(session.id)}"
             style="top:${(minutes(session.start) - start) * scale}px;height:${duration * scale - 3}px"
-            aria-label="${escape(session.title)}. ${session.start} to ${session.end}. ${escape(roomName(session.room))}. Open details.">
+            aria-label="${escape(session.title)}. ${session.start} to ${session.end}. ${escape(roomName(session.room))}.${session.presenters?.length ? ` Presenters: ${escape(session.presenters.join(', '))}.` : ''}${session.chair ? ` Chair: ${escape(session.chair)}.` : ''} Open details.">
             <span class="programme-session-time">${session.start}–${session.end}</span>
             <span class="programme-session-name">${escape(session.title)}</span>
             <span class="programme-session-meta">${escape(meta)}</span>
@@ -165,6 +167,9 @@
     get('session-title').textContent = session.title;
     get('session-location').textContent = `${dayName(session.date)} · ${session.start}–${session.end} · ${roomName(session.room)}`;
     let content = session.chair ? `<p class="programme-muted">Chair · ${escape(session.chair)}</p>` : '';
+    if (session.presenters?.length) {
+      content += `<p class="programme-muted"><strong>Presenters · ${escape(session.presenters.join(', '))}</strong>${session.affiliation ? `<br>${escape(session.affiliation)}` : ''}</p>`;
+    }
     if (session.papers.length) {
       content += `<p class="programme-muted">${session.papers.length} ${session.type === 'poster'
         ? 'posters. Board numbers restart in each poster session.'
@@ -177,6 +182,8 @@
             ${item.speaker ? `<span class="programme-agenda-speaker">${escape(item.speaker)}${item.role ? ` · <span>${escape(item.role)}</span>` : ''}</span>` : ''}
             ${item.link ? `<a class="programme-paper-link" href="${escape(item.link)}" target="_blank" rel="noopener">LinkedIn ↗</a>` : ''}
           </div></li>`).join('')}</ol>`;
+    } else if (session.details_url) {
+      content += `<p><a class="programme-paper-link" href="${escape(session.details_url)}">Tutorial overview and outline →</a></p>`;
     } else {
       const note = session.type === 'keynote' ? 'Speaker listed in the session title.'
         : !session.room ? 'The venue will be announced.' : 'See the timetable above for the session time and room.';
@@ -212,6 +219,7 @@
       matching: session.papers.filter(paper => [paper.number, `#${paper.number}`, paper.title, ...(paper.authors || [])]
         .join(' ').toLowerCase().includes(query))
     })).filter(({ session, matching }) => !query || matching.length || [session.title, session.chair,
+      ...(session.presenters || []), session.affiliation,
       roomName(session.room), dayName(session.date), session.date,
       ...(session.agenda || []).map(item => [item.title, item.speaker, item.role].join(' '))
     ].join(' ').toLowerCase().includes(query));
@@ -221,6 +229,7 @@
         data-paper-focus="${query && matching.length === 1 ? escape(matching[0].number) : ''}">
         <strong>${escape(session.title)}</strong>
         <small>${dayName(session.date)} · ${session.start}–${session.end} · ${escape(roomName(session.room))}</small>
+        ${session.presenters?.length ? `<small>Presenters · ${escape(session.presenters.join(', '))}</small>` : ''}
         ${query ? matching.map(paper => `<span class="programme-matching-paper">#${escape(paper.number)} ${escape(paper.title)}</span>`).join('') : ''}
       </button>`).join('') : '<p class="programme-empty">No matching sessions. Try a paper number, a shorter title or a room.</p>';
     get('search-results').querySelectorAll('button').forEach(button => {

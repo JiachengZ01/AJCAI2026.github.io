@@ -46,7 +46,7 @@
         <header>
 
           <!-- Nav Bar -->
-          <iframe id='menu' src='./top_menu.html?v=4' frameborder='0' width='100%' height='64px' scrolling='auto'
+          <iframe id='menu' src='./top_menu.html?v=5' frameborder='0' width='100%' height='64px' scrolling='auto'
             style='z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
           <!-- End Of Nav Bar -->
 
@@ -79,7 +79,53 @@
               </div>
 
               <h3 class="pt-6 mb-4 font-titleFont text-2xl text-mainPurple font-bold">Tutorials</h3>
-              <p class="mb-4 text-gray-700">To be announced.</p>
+
+              <div class="mb-8">
+                <div id="tutorial-1" class="mb-6 p-4 bg-gray-50 rounded-lg border-l-4 border-mainPurple" style="scroll-margin-top:80px">
+                  <h4 class="font-titleFont text-xl text-mainPurple font-bold mb-2">Fighting Bushfires with AI: Datasets, Models and Benchmarks for Early Smoke Detection</h4>
+                  <p class="mb-4 text-gray-700"><strong>Presenters:</strong> Weihao Li and Nick Barnes<br />School of Computing, The Australian National University</p>
+                  <p class="mb-4 text-gray-700">Early bushfire smoke is small, semi-transparent and difficult to distinguish from clouds, fog and haze. This tutorial connects advances in machine learning and computer vision with the practical challenge of detecting and segmenting smoke before flames become visible. It covers representative and geographically diverse datasets; task-specific, generative, foundation and multimodal models; and benchmarks that account for false alarms, uncertainty, domain shift and realistic deployment conditions.</p>
+                  <p class="mb-4 text-gray-700"><strong>Audience and prerequisites:</strong> Researchers, postgraduate students and practitioners in machine learning, computer vision, multimodal AI and environmental AI. Basic familiarity with deep learning and classification, detection and segmentation is expected; no wildfire-science background is required. The format combines lectures, visual case studies and discussion, with no specialised software or GPU access needed.</p>
+                  <details class="mb-4 text-gray-700">
+                    <summary class="font-bold cursor-pointer">Outline and presenter biographies</summary>
+                    <h5 class="mt-4 mb-2 font-bold">Outline</h5>
+                    <ol class="mb-4" style="list-style:decimal;padding-left:1.5rem">
+                      <li>Early smoke detection as an AI problem: camera-based monitoring, ambiguous visual evidence and reliable recognition.</li>
+                      <li>Datasets: Smoke5K, SmokeSeg, AusSmoke and MultiNatSmoke; annotation, geographic diversity, hard negatives, synthetic imagery and train/test design.</li>
+                      <li>Models: CNNs and Transformers, uncertainty-aware segmentation, false-alarm suppression, generative augmentation, promptable foundation models and multimodal language models.</li>
+                      <li>Benchmarks: detection and segmentation metrics, cross-domain generalisation, atmospheric distractors, uncertainty and annotation ambiguity.</li>
+                      <li>Challenges and opportunities: temporal modelling, sensor fusion, domain adaptation, world models, embodied AI, edge deployment and human-in-the-loop early warning.</li>
+                    </ol>
+                    <h5 class="mt-4 mb-2 font-bold">About the presenters</h5>
+                    <p class="mb-4"><strong>Weihao Li</strong> is a Research Fellow in the School of Computing at the Australian National University. His research focuses on reliable and data-efficient visual AI, multimodal models and environmental applications, including diverse smoke datasets, false-alarm suppression and multimodal evaluation.</p>
+                    <p><strong>Nick Barnes</strong> is a Professor in the School of Computing at the Australian National University. His research spans computer vision, probabilistic and generative methods, dense prediction and uncertainty modelling, including AI-enabled bushfire smoke monitoring.</p>
+                  </details>
+                  <p class="text-gray-700"><a href="./program.html#tutorial-1" style="text-decoration:underline">View this tutorial in the program</a></p>
+                </div>
+
+                <div id="tutorial-2" class="mb-6 p-4 bg-gray-50 rounded-lg border-l-4 border-mainPurple" style="scroll-margin-top:80px">
+                  <h4 class="font-titleFont text-xl text-mainPurple font-bold">Emergency Department: A Real-World Edge Case for Clinical NLP</h4>
+                  <p class="mb-4 text-gray-700"><strong>Presenters:</strong> Dipankar Srirag and Aditya Joshi<br />School of Computer Science &amp; Engineering, University of New South Wales, Sydney, Australia</p>
+                  <p class="mb-4 text-gray-700">Emergency departments challenge the assumptions of clinical NLP: decisions often rely on short spoken conversations, incomplete information and time pressure, with different consequences for under-triage and over-triage. Drawing on the presenters&rsquo; 46-paper survey, this tutorial maps NLP tasks, datasets and modelling approaches across triage, diagnosis and disposition. It examines open research frontiers, evaluation and deployment readiness, and concludes with a guided activity in which participants formulate an emergency-department NLP research project.</p>
+                  <p class="mb-4 text-gray-700"><strong>Audience and prerequisites:</strong> AI and NLP practitioners, graduate students, academics and industry researchers. Working familiarity with standard NLP tasks and Transformer-based language models is expected; no clinical background or prior clinical-NLP experience is assumed. Clinical terminology is introduced during the tutorial.</p>
+                  <details class="mb-4 text-gray-700">
+                    <summary class="font-bold cursor-pointer">Outline and presenter biographies</summary>
+                    <h5 class="mt-4 mb-2 font-bold">Outline</h5>
+                    <ol class="mb-4" style="list-style:decimal;padding-left:1.5rem">
+                      <li>Why emergency-department NLP? The clinical NLP landscape, the phases of emergency care and the people involved.</li>
+                      <li>The research landscape: triage classification, summarisation, diagnosis, radiology reports, disposition and discharge instructions; datasets and modelling paradigms.</li>
+                      <li>Five frontiers: generalisability, robustness to real clinical input, temporal validity, evaluation and clinical validation, and deployment.</li>
+                      <li>Desiderata and readiness: latency, privacy, linguistic variation, cost-sensitive evaluation, faithful explanations, abstention and workflow integration.</li>
+                      <li>Getting started with a project: data access, research ethics, simulation and clinical collaboration.</li>
+                      <li>Guided small-group activity: define a research question, NLP task, data, evaluation metric and readiness requirements for an emergency-department scenario.</li>
+                    </ol>
+                    <h5 class="mt-4 mb-2 font-bold">About the presenters</h5>
+                    <p class="mb-4"><strong>Dipankar Srirag</strong> is a PhD candidate in the School of Computer Science &amp; Engineering at UNSW Sydney. His research develops a multilingual conversational agent for the emergency department. He is the first author of the survey underlying this tutorial and of TriageSim, a conversational triage simulation framework.</p>
+                    <p><strong>Aditya Joshi</strong> is a Senior Lecturer in the School of Computer Science &amp; Engineering at UNSW Sydney, where he leads the NLP research group. He has presented tutorials at EMNLP, AACL and COLING on computational sarcasm, healthcare NLP and language varieties.</p>
+                  </details>
+                  <p class="text-gray-700"><a href="./program.html#tutorial-2" style="text-decoration:underline">View this tutorial in the program</a></p>
+                </div>
+              </div>
 
             </header>
           </div>

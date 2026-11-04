@@ -1,12 +1,12 @@
 // Programme supplied in files/AJCAI-2026-Programme-updated_3.html.
 window.PROGRAMME = {
   "conference": "AJCAI 2026",
-  "dates": "26–30 November 2026",
+  "dates": "27–30 November 2026",
   "venue": "Sir Owen G Glenn Building",
   "institution": "University of Auckland",
   "city": "Auckland, New Zealand",
   "timezone": "NZDT (UTC+13)",
-  "updated": "14 October 2026",
+  "updated": "4 November 2026",
   "source_exported_at": "2026-10-13T12:15:44.833Z",
   "days": [
     {
@@ -299,6 +299,9 @@ window.PROGRAMME = {
       "room": "260-055",
       "chair": "",
       "title": "Tutorial 1 · Fighting Bushfires with AI: Datasets, Models and Benchmarks for Early Smoke Detection",
+      "presenters": ["Weihao Li", "Nick Barnes"],
+      "affiliation": "School of Computing, The Australian National University",
+      "details_url": "./workshopandtutorial.html#tutorial-1",
       "date": "2026-11-27",
       "papers": []
     },
@@ -365,6 +368,9 @@ window.PROGRAMME = {
       "room": "260-055",
       "chair": "",
       "title": "Tutorial 2 · Emergency Department: A Real-World Edge Case for Clinical NLP",
+      "presenters": ["Dipankar Srirag", "Aditya Joshi"],
+      "affiliation": "School of Computer Science & Engineering, University of New South Wales, Sydney, Australia",
+      "details_url": "./workshopandtutorial.html#tutorial-2",
       "date": "2026-11-27",
       "papers": []
     },
@@ -440,7 +446,7 @@ window.PROGRAMME = {
       "start": "10:30",
       "end": "11:30",
       "room": "260-055",
-      "chair": "",
+      "chair": "Huaming Chen",
       "title": "Responsible AI Forum",
       "date": "2026-11-28",
       "papers": []
@@ -1609,7 +1615,7 @@ window.PROGRAMME = {
       "start": "15:30",
       "end": "17:00",
       "room": "260-073",
-      "chair": "",
+      "chair": "Feng Liu",
       "title": "AI Highlight",
       "date": "2026-11-29",
       "papers": []
