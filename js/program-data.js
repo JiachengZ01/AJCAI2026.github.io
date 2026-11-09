@@ -1626,6 +1626,8 @@ window.PROGRAMME = {
       "start": "18:30",
       "end": "21:00",
       "room": "",
+      "venue": "Hilton Auckland",
+      "address": "147 Quay Street, Auckland CBD, Auckland 1010",
       "chair": "",
       "title": "Conference Banquet",
       "date": "2026-11-29",

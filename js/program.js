@@ -20,8 +20,9 @@
   };
   let selectedDay = '2026-11-28';
 
-  function roomName(id) {
-    const room = rooms.get(id);
+  function venueName(session) {
+    if (session.venue) return session.venue;
+    const room = rooms.get(session.room);
     return room ? `${room.name} · ${room.id}` : 'Venue to be announced';
   }
 
@@ -101,7 +102,7 @@
           <button class="programme-session ${escape(session.type)} ${duration <= 30 ? 'compact' : ''}"
             type="button" data-session="${escape(session.id)}" id="${escape(session.id)}"
             style="top:${(minutes(session.start) - start) * scale}px;height:${duration * scale - 3}px"
-            aria-label="${escape(session.title)}. ${session.start} to ${session.end}. ${escape(roomName(session.room))}.${session.presenters?.length ? ` Presenters: ${escape(session.presenters.join(', '))}.` : ''}${session.chair ? ` Chair: ${escape(session.chair)}.` : ''} Open details.">
+            aria-label="${escape(session.title)}. ${session.start} to ${session.end}. ${escape(venueName(session))}.${session.presenters?.length ? ` Presenters: ${escape(session.presenters.join(', '))}.` : ''}${session.chair ? ` Chair: ${escape(session.chair)}.` : ''} Open details.">
             <span class="programme-session-time">${session.start}–${session.end}</span>
             <span class="programme-session-name">${escape(session.title)}</span>
             <span class="programme-session-meta">${escape(meta)}</span>
@@ -114,7 +115,7 @@
     get('grid').innerHTML = html;
     get('offsite').innerHTML = all.filter(session => !session.room).map(session => `
       <button class="programme-offsite-item" type="button" data-session="${escape(session.id)}">
-        ${session.start}–${session.end}　${escape(session.title)} <span>Venue to be announced</span>
+        ${session.start}–${session.end}　${escape(session.title)} <span>${escape(venueName(session))}${session.address ? `<br>Address: ${escape(session.address)}` : ''}</span>
       </button>`).join('');
     root.querySelectorAll('[data-session]').forEach(button => {
       button.addEventListener('click', () => openSession(button.dataset.session));
@@ -165,7 +166,7 @@
     if (!session) return;
     get('session-category').textContent = labels[session.type];
     get('session-title').textContent = session.title;
-    get('session-location').textContent = `${dayName(session.date)} · ${session.start}–${session.end} · ${roomName(session.room)}`;
+    get('session-location').textContent = `${dayName(session.date)} · ${session.start}–${session.end} · ${venueName(session)}`;
     let content = session.chair ? `<p class="programme-muted">Chair · ${escape(session.chair)}</p>` : '';
     if (session.presenters?.length) {
       content += `<p class="programme-muted"><strong>Presenters · ${escape(session.presenters.join(', '))}</strong>${session.affiliation ? `<br>${escape(session.affiliation)}` : ''}</p>`;
@@ -184,9 +185,11 @@
           </div></li>`).join('')}</ol>`;
     } else if (session.details_url) {
       content += `<p><a class="programme-paper-link" href="${escape(session.details_url)}">Tutorial overview and outline →</a></p>`;
+    } else if (session.address) {
+      content += `<p class="programme-muted">Address: ${escape(session.address)}</p>`;
     } else {
       const note = session.type === 'keynote' ? 'Speaker listed in the session title.'
-        : !session.room ? 'The venue will be announced.' : 'See the timetable above for the session time and room.';
+        : !session.room && !session.venue ? 'The venue will be announced.' : 'See the timetable above for the session time and room.';
       content += `<p class="programme-muted">${note}</p>`;
     }
     get('session-content').innerHTML = content;
@@ -220,7 +223,7 @@
         .join(' ').toLowerCase().includes(query))
     })).filter(({ session, matching }) => !query || matching.length || [session.title, session.chair,
       ...(session.presenters || []), session.affiliation,
-      roomName(session.room), dayName(session.date), session.date,
+      venueName(session), session.address, dayName(session.date), session.date,
       ...(session.agenda || []).map(item => [item.title, item.speaker, item.role].join(' '))
     ].join(' ').toLowerCase().includes(query));
     get('search-count').textContent = `${found.length} ${found.length === 1 ? 'session' : 'sessions'}${query ? ' matching your search' : ' across all five days'}`;
@@ -228,7 +231,7 @@
       <button type="button" class="programme-search-result" data-search-session="${escape(session.id)}"
         data-paper-focus="${query && matching.length === 1 ? escape(matching[0].number) : ''}">
         <strong>${escape(session.title)}</strong>
-        <small>${dayName(session.date)} · ${session.start}–${session.end} · ${escape(roomName(session.room))}</small>
+        <small>${dayName(session.date)} · ${session.start}–${session.end} · ${escape(venueName(session))}</small>
         ${session.presenters?.length ? `<small>Presenters · ${escape(session.presenters.join(', '))}</small>` : ''}
         ${query ? matching.map(paper => `<span class="programme-matching-paper">#${escape(paper.number)} ${escape(paper.title)}</span>`).join('') : ''}
       </button>`).join('') : '<p class="programme-empty">No matching sessions. Try a paper number, a shorter title or a room.</p>';
@@ -244,7 +247,7 @@
     get('papers-content').innerHTML = groups.map(session => `
       <details class="programme-group" data-paper-session="${escape(session.id)}">
         <summary>${escape(session.title)} <span>${session.papers.length} ${session.type === 'poster' ? 'posters' : 'papers'}</span></summary>
-        <p class="programme-group-meta">${dayName(session.date)} · ${session.start}–${session.end} · ${escape(roomName(session.room))}</p>
+        <p class="programme-group-meta">${dayName(session.date)} · ${session.start}–${session.end} · ${escape(venueName(session))}</p>
         <button class="programme-group-jump" type="button" data-jump="${escape(session.id)}">View in timetable</button>
         <ol class="programme-paper-list">${paperList(session)}</ol>
       </details>`).join('');
