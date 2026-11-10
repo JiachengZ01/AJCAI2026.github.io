@@ -1147,7 +1147,7 @@ window.PROGRAMME = {
           "start": "10:40",
           "end": "11:30",
           "title": "Platinum Sponsor Keynote",
-          "speaker": "Yue Yang",
+          "speaker": "Yue Yang & Dave Lemphers",
           "role": "Maincode · Platinum Sponsor"
         },
         {
