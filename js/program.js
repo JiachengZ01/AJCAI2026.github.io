@@ -181,6 +181,9 @@
         <li class="programme-paper-row"><span class="programme-paper-time">${item.start}–${item.end}</span>
           <div><p class="programme-paper-title">${escape(item.title)}</p>
             ${item.speaker ? `<span class="programme-agenda-speaker">${escape(item.speaker)}${item.role ? ` · <span>${escape(item.role)}</span>` : ''}</span>` : ''}
+            ${item.panellists?.length ? `<p class="programme-muted">Panellists: ${escape(item.panellists.join(', '))}</p>` : ''}
+            ${item.chair ? `<p class="programme-muted">Chair: ${escape(item.chair)}</p>` : ''}
+            ${item.facilitator ? `<p class="programme-muted">Facilitator: ${escape(item.facilitator)}</p>` : ''}
             ${item.link ? `<a class="programme-paper-link" href="${escape(item.link)}" target="_blank" rel="noopener">LinkedIn ↗</a>` : ''}
           </div></li>`).join('')}</ol>`;
     } else if (session.details_url) {
@@ -224,7 +227,8 @@
     })).filter(({ session, matching }) => !query || matching.length || [session.title, session.chair,
       ...(session.presenters || []), session.affiliation,
       venueName(session), session.address, dayName(session.date), session.date,
-      ...(session.agenda || []).map(item => [item.title, item.speaker, item.role].join(' '))
+      ...(session.agenda || []).map(item => [item.title, item.speaker, item.role, item.chair,
+        item.facilitator, ...(item.panellists || [])].join(' '))
     ].join(' ').toLowerCase().includes(query));
     get('search-count').textContent = `${found.length} ${found.length === 1 ? 'session' : 'sessions'}${query ? ' matching your search' : ' across all five days'}`;
     get('search-results').innerHTML = found.length ? found.map(({ session, matching }) => `

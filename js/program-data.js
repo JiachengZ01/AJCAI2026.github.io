@@ -37,7 +37,7 @@ window.PROGRAMME = {
       "date": "2026-11-30",
       "label": "30 November",
       "weekday": "Monday",
-      "theme": "Main conference & closing"
+      "theme": "Main conference"
     }
   ],
   "rooms": [
@@ -1132,7 +1132,7 @@ window.PROGRAMME = {
       "start": "10:30",
       "end": "12:00",
       "room": "260-057",
-      "chair": "Yi Mei",
+      "chair": "",
       "title": "Industry Day · Opening & Sponsor Keynote",
       "date": "2026-11-29",
       "papers": [],
@@ -1146,16 +1146,18 @@ window.PROGRAMME = {
         {
           "start": "10:40",
           "end": "11:30",
-          "title": "Platinum Sponsor Keynote",
-          "speaker": "Yue Yang & Dave Lemphers",
-          "role": "Maincode · Platinum Sponsor"
+          "title": "Platinum Sponsor Keynote: From Data Centres to Intelligence: Building Australia's Sovereign AI Future",
+          "speaker": "David Lemphers and Yue Yang",
+          "role": "Maincode · Platinum Sponsor",
+          "chair": "Yi Mei"
         },
         {
           "start": "11:30",
           "end": "12:00",
-          "title": "Industry Talk 1",
+          "title": "Industry Talk 1: From PhD to Product: Turning NLP Research into an Enterprise AI Company",
           "speaker": "Alyona Medelyan",
-          "role": "Co-Founder & CEO, Thematic",
+          "role": "Co-Founder and CEO, Thematic",
+          "chair": "Qi Chen",
           "link": "https://www.linkedin.com/in/medelyan/"
         }
       ]
@@ -1188,7 +1190,7 @@ window.PROGRAMME = {
       "start": "14:00",
       "end": "15:00",
       "room": "260-057",
-      "chair": "Yi Mei",
+      "chair": "",
       "title": "Industry Day · Industry Talks",
       "date": "2026-11-29",
       "papers": [],
@@ -1196,18 +1198,20 @@ window.PROGRAMME = {
         {
           "start": "14:00",
           "end": "14:30",
-          "title": "Industry Talk 2",
+          "title": "Industry Talk 2: Computer Vision on the Shop Floor: Lessons from Deploying Real-Time Quality Control in Hydraulic Hose Assembly",
           "speaker": "Zexuan (Martin) Zhu",
           "role": "R&D Team Leader, BOA Hydraulics",
+          "chair": "Yuqian Lu",
           "link": "https://www.linkedin.com/in/zexuan-martin-zhu-b53920b3/"
         },
         {
           "start": "14:30",
           "end": "15:00",
-          "title": "Industry Talk 3",
-          "speaker": "Alain Richardt",
-          "role": "Founder, Atomic Tessellator",
-          "link": "https://www.linkedin.com/in/alain-richardt/"
+          "title": "Industry Talk 3: Building Deterministic Outcomes from Generative AI",
+          "speaker": "Harrison Mitchell",
+          "role": "Co-Founder and CEO, Qrtr",
+          "chair": "Kevin I-Kai Wang",
+          "link": "https://www.linkedin.com/in/jharrisonmitchell/"
         }
       ]
     },
@@ -1217,7 +1221,7 @@ window.PROGRAMME = {
       "start": "15:30",
       "end": "17:10",
       "room": "260-057",
-      "chair": "Yi Mei",
+      "chair": "",
       "title": "Industry Day · Talks & Panel",
       "date": "2026-11-29",
       "papers": [],
@@ -1225,28 +1229,28 @@ window.PROGRAMME = {
         {
           "start": "15:30",
           "end": "16:00",
-          "title": "Industry Talk 4",
-          "speaker": "Harrison Mitchell",
-          "role": "Co-founder & CEO, Qrtr",
-          "link": "https://www.linkedin.com/in/jharrisonmitchell/"
-        },
-        {
-          "start": "16:00",
-          "end": "16:30",
-          "title": "Industry Talk 5",
+          "title": "Industry Talk 4: Real-World Context for Forecasting Models: From Research to Production",
           "speaker": "Xuxu Wang",
           "role": "Chief Data Officer, PredictHQ",
+          "chair": "Yuqian Lu",
           "link": "https://www.linkedin.com/in/dr-xuxu-wang-98538954/"
         },
         {
-          "start": "16:30",
+          "start": "16:00",
           "end": "17:00",
-          "title": "Panel Discussion: AI Research Meets Industry – Challenges and Opportunities"
+          "title": "Panel Discussion: AI Research Meets Industry – Challenges and Opportunities",
+          "panellists": [
+            "Yue Yang",
+            "Martin Zhu",
+            "Harrison Mitchell",
+            "Xuxu Wang"
+          ],
+          "facilitator": "Kevin I-Kai Wang"
         },
         {
           "start": "17:00",
           "end": "17:10",
-          "title": "Closing and Networking",
+          "title": "Closing Remarks, followed by Networking",
           "speaker": "Yi Mei"
         }
       ]
@@ -1811,17 +1815,6 @@ window.PROGRAMME = {
           "talk_end": "15:10"
         }
       ]
-    },
-    {
-      "id": "closing",
-      "type": "other",
-      "start": "15:30",
-      "end": "15:50",
-      "room": "260-073",
-      "chair": "",
-      "title": "Closing",
-      "date": "2026-11-30",
-      "papers": []
     }
   ],
   "counts": {
@@ -1836,7 +1829,7 @@ window.PROGRAMME = {
     "2026-11-27": "Workshops, tutorials & Encore",
     "2026-11-28": "Main conference & forums",
     "2026-11-29": "Main conference & industry",
-    "2026-11-30": "Main conference & closing"
+    "2026-11-30": "Main conference"
   },
   "posterGroupingRevision": "2026-10-14-oral-day-topic-v1"
 };
