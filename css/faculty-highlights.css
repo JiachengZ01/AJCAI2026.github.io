@@ -1,0 +1,248 @@
+#faculty-highlights {
+  color: #374151;
+  line-height: 1.7;
+}
+
+#faculty-highlights .nfh-content {
+  padding: 2.25rem 1.5rem 0;
+}
+
+#faculty-highlights .nfh-eyebrow {
+  margin-bottom: 0.5rem;
+  color: #56247a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+#faculty-highlights h1 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+#faculty-highlights .nfh-intro {
+  max-width: 62rem;
+}
+
+#faculty-highlights .nfh-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.75rem 0 1rem;
+  padding: 1.5rem;
+  border-top: 3px solid #56247a;
+  background: #f3f5f9;
+}
+
+#faculty-highlights .nfh-facts dt {
+  margin-bottom: 0.4rem;
+  color: #56247a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#faculty-highlights .nfh-facts dd {
+  color: #1a3a6b;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+#faculty-highlights .nfh-link {
+  color: #1a3a6b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+#faculty-highlights .nfh-link:hover {
+  color: #56247a;
+}
+
+#faculty-highlights a:focus-visible {
+  outline: 3px solid #56247a;
+  outline-offset: 4px;
+}
+
+#faculty-highlights .nfh-section {
+  margin-top: 2.75rem;
+}
+
+#faculty-highlights .nfh-section-title {
+  margin-bottom: 1.25rem;
+  line-height: 1.35;
+}
+
+#faculty-highlights .nfh-speakers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+#faculty-highlights .nfh-speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1.5rem 1rem;
+  border: 1px solid #e6ecf5;
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  text-align: center;
+  text-decoration: none;
+}
+
+#faculty-highlights .nfh-speaker:hover {
+  border-color: #56247a;
+  background: #f3f1f8;
+}
+
+#faculty-highlights .nfh-speaker img {
+  width: 152px;
+  height: 152px;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+#faculty-highlights .nfh-speaker h3 {
+  margin-bottom: 0.35rem;
+  color: #1a3a6b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+#faculty-highlights .nfh-affiliation {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+#faculty-highlights .nfh-speaker-time {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  color: #56247a;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+#faculty-highlights .nfh-order-note {
+  margin-top: 1rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+#faculty-highlights .nfh-talk {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid #dfe5ef;
+  scroll-margin-top: 5.5rem;
+}
+
+#faculty-highlights .nfh-talk-time {
+  color: #56247a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#faculty-highlights .nfh-talk-title {
+  color: #1a3a6b;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#faculty-highlights .nfh-talk-speaker {
+  margin-top: 0.4rem;
+  color: #56247a;
+  font-weight: 600;
+}
+
+#faculty-highlights .nfh-talk h4 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+#faculty-highlights .nfh-talk p + p {
+  margin-top: 1rem;
+}
+
+#faculty-highlights .nfh-organisation {
+  padding-top: 2rem;
+  border-top: 2px solid #e6ecf5;
+}
+
+#faculty-highlights .nfh-organisation h3 {
+  margin: 1.25rem 0 0.5rem;
+  color: #1a3a6b;
+  font-weight: 700;
+}
+
+#faculty-highlights .nfh-committee li + li {
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 800px) {
+  #faculty-highlights .nfh-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #faculty-highlights .nfh-speakers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  #faculty-highlights .nfh-content {
+    padding: 1.75rem 1.25rem 0;
+  }
+
+  #faculty-highlights h1 {
+    font-size: 1.8rem;
+  }
+
+  #faculty-highlights .nfh-facts {
+    padding: 1rem;
+    gap: 1.25rem 0.75rem;
+  }
+
+  #faculty-highlights .nfh-facts dd {
+    font-size: 0.9rem;
+  }
+
+  #faculty-highlights .nfh-speakers {
+    gap: 0.75rem;
+  }
+
+  #faculty-highlights .nfh-speaker {
+    padding: 1rem 0.6rem;
+  }
+
+  #faculty-highlights .nfh-speaker img {
+    width: 110px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  #faculty-highlights .nfh-speaker h3 {
+    font-size: 1rem;
+  }
+
+  #faculty-highlights .nfh-affiliation {
+    font-size: 0.8rem;
+  }
+
+  #faculty-highlights .nfh-talk {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+    padding: 1.5rem 0;
+  }
+}

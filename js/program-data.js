@@ -6,7 +6,7 @@ window.PROGRAMME = {
   "institution": "University of Auckland",
   "city": "Auckland, New Zealand",
   "timezone": "NZDT (UTC+13)",
-  "updated": "4 November 2026",
+  "updated": "17 November 2026",
   "source_exported_at": "2026-10-13T12:15:44.833Z",
   "days": [
     {
@@ -424,7 +424,7 @@ window.PROGRAMME = {
       "start": "08:50",
       "end": "10:00",
       "room": "260-073",
-      "chair": "",
+      "chair": "Gill Dobbie",
       "title": "Opening & Keynote 1 · Professor Yun Sing Koh",
       "date": "2026-11-28",
       "papers": []
@@ -457,7 +457,7 @@ window.PROGRAMME = {
       "start": "10:30",
       "end": "12:10",
       "room": "260-005",
-      "chair": "",
+      "chair": "Dong Gong",
       "title": "Oral 2 · Adaptive Learning, Scientific and Environmental AI",
       "date": "2026-11-28",
       "papers": [
@@ -519,7 +519,7 @@ window.PROGRAMME = {
       "start": "10:30",
       "end": "12:10",
       "room": "260-057",
-      "chair": "",
+      "chair": "Zijian Wang",
       "title": "Oral 1 · Computer Vision: Detection, Reconstruction and Reasoning",
       "date": "2026-11-28",
       "papers": [
@@ -592,7 +592,7 @@ window.PROGRAMME = {
       "start": "13:10",
       "end": "14:10",
       "room": "260-073",
-      "chair": "",
+      "chair": "Yanbin Liu",
       "title": "Keynote 2 · Professor Stephen Gould",
       "date": "2026-11-28",
       "papers": []
@@ -614,7 +614,7 @@ window.PROGRAMME = {
       "start": "14:10",
       "end": "15:30",
       "room": "260-057",
-      "chair": "",
+      "chair": "Zesheng Ye",
       "title": "Oral 3 · LLM Agents: Safety and Action Reliability",
       "date": "2026-11-28",
       "papers": [
@@ -1026,7 +1026,7 @@ window.PROGRAMME = {
       "start": "09:00",
       "end": "10:00",
       "room": "260-073",
-      "chair": "",
+      "chair": "Jiamou Liu",
       "title": "Keynote 3 · Professor Albert Bifet",
       "date": "2026-11-29",
       "papers": []
@@ -1048,7 +1048,7 @@ window.PROGRAMME = {
       "start": "10:30",
       "end": "11:30",
       "room": "260-055",
-      "chair": "",
+      "chair": "Xin Yu",
       "title": "Oral 4 · Reliable and Efficient Model Evaluation",
       "date": "2026-11-29",
       "papers": [
@@ -1090,7 +1090,7 @@ window.PROGRAMME = {
       "start": "14:00",
       "end": "15:00",
       "room": "260-055",
-      "chair": "",
+      "chair": "Hong Jia",
       "title": "Oral 5 · Multimodal and Health AI",
       "date": "2026-11-29",
       "papers": [
@@ -1177,7 +1177,7 @@ window.PROGRAMME = {
       "start": "13:00",
       "end": "14:00",
       "room": "260-073",
-      "chair": "",
+      "chair": "Feng Liu",
       "title": "Keynote 4 · Dr. Daniel Kearney",
       "date": "2026-11-29",
       "papers": []
@@ -1257,7 +1257,7 @@ window.PROGRAMME = {
       "start": "11:30",
       "end": "12:30",
       "room": "260-073",
-      "chair": "",
+      "chair": "Yiliao Song",
       "title": "Keynote 7 · Associate Professor Xinchao Wang",
       "date": "2026-11-30",
       "papers": []
@@ -1650,7 +1650,7 @@ window.PROGRAMME = {
       "start": "09:00",
       "end": "10:00",
       "room": "260-073",
-      "chair": "",
+      "chair": "Zijian Wang",
       "title": "Keynote 5 · Professor Cecile Paris",
       "date": "2026-11-30",
       "papers": []
@@ -1672,7 +1672,7 @@ window.PROGRAMME = {
       "start": "10:30",
       "end": "11:30",
       "room": "260-073",
-      "chair": "",
+      "chair": "Yiliao Song",
       "title": "Keynote 6 · Professor Jun Zhou",
       "date": "2026-11-30",
       "papers": []
@@ -1694,7 +1694,7 @@ window.PROGRAMME = {
       "start": "13:30",
       "end": "15:10",
       "room": "260-055",
-      "chair": "",
+      "chair": "Fangfang Zhang",
       "title": "Oral 7 · Reinforcement Learning, Scheduling and Optimization",
       "date": "2026-11-30",
       "papers": [
@@ -1756,7 +1756,7 @@ window.PROGRAMME = {
       "start": "13:30",
       "end": "15:10",
       "room": "260-057",
-      "chair": "",
+      "chair": "Zesheng Ye",
       "title": "Oral 6 · LLM Reliability, Retrieval and Recommendation",
       "date": "2026-11-30",
       "papers": [
