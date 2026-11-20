@@ -600,8 +600,8 @@ window.PROGRAMME = {
     {
       "id": "phd-forum",
       "type": "forum",
-      "start": "14:30",
-      "end": "17:30",
+      "start": "14:10",
+      "end": "17:20",
       "room": "260-055",
       "chair": "",
       "title": "PhD Forum",
@@ -1620,7 +1620,7 @@ window.PROGRAMME = {
       "end": "17:00",
       "room": "260-073",
       "chair": "Feng Liu",
-      "title": "AI Highlight",
+      "title": "New Faculty Highlights",
       "date": "2026-11-29",
       "papers": []
     },
