@@ -1,0 +1,76 @@
+.presenter-skip {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: #1a3a6b;
+}
+
+.presenter-skip:focus { top: 0.5rem; }
+.presenter-page { font-size: 1rem; scroll-margin-top: 5.5rem; }
+.presenter-page .event-eyebrow,
+.presenter-page .event-facts dt { font-size: 0.875rem; }
+.presenter-page .event-note { font-size: 0.9375rem; }
+
+.presenter-page .presenter-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.presenter-page .presenter-sections a {
+  padding: 0.6rem 1rem;
+  border: 1px solid #dce3ee;
+  border-radius: 0.4rem;
+  background: #f3f5f9;
+  font-weight: 600;
+}
+
+.presenter-page .presenter-sections a:hover { background: #e9edf5; }
+
+.presenter-page .presenter-important {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #56247a;
+  background: #f5f1f8;
+}
+
+.presenter-page .presenter-important h3 { color: #56247a; }
+.presenter-page .presenter-important p { margin: 0; }
+.presenter-page .presenter-programme-link,
+.presenter-page .presenter-setup-note { margin-top: 1.25rem; }
+.presenter-page .presenter-poster-times td:nth-child(2) { width: 40%; font-weight: 400; }
+
+.presenter-page .presenter-printers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.presenter-page .presenter-printers article {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid #dfe5ef;
+  border-radius: 0.5rem;
+}
+
+.presenter-page .presenter-printers dl { margin: 0; }
+.presenter-page .presenter-printers dl > div + div { margin-top: 0.75rem; }
+.presenter-page .presenter-printers dt { color: #596579; font-size: 0.875rem; font-weight: 600; }
+.presenter-page .presenter-printers dd { margin: 0.1rem 0 0; overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .presenter-page .presenter-printers { grid-template-columns: 1fr; }
+}
+
+@media print {
+  #menu, .presenter-skip, .presenter-page .presenter-sections { display: none; }
+  .presenter-page .event-table-wrap { overflow: visible; }
+  .presenter-page .event-program { min-width: 0; }
+  .presenter-page .presenter-printers { grid-template-columns: 1fr; }
+  .presenter-page .presenter-printers article { break-inside: avoid; }
+  .presenter-page h2, .presenter-page h3 { break-after: avoid; }
+}
