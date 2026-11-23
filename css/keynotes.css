@@ -1,0 +1,332 @@
+.keynotes-page {
+  margin: 0;
+  background: #fff;
+  color: #29384a;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.keynotes-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 64px;
+  border: 0;
+}
+
+.keynotes-skip {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: #1a3a6b;
+}
+
+.keynotes-skip:focus { top: 0.5rem; }
+
+#keynotes {
+  padding-top: 64px;
+  scroll-margin-top: 64px;
+}
+
+#keynotes *,
+#keynotes *::before,
+#keynotes *::after { box-sizing: border-box; }
+
+.keynotes-wrapper {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+#keynotes h1,
+#keynotes h2,
+#keynotes h3,
+#keynotes h4,
+#keynotes p,
+#keynotes dl,
+#keynotes dd,
+#keynotes ul { margin: 0; }
+
+#keynotes h1,
+#keynotes h2,
+#keynotes h3 {
+  color: #1a3a6b;
+  font-family: Montserrat, system-ui, sans-serif;
+}
+
+#keynotes .keynotes-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20rem;
+  align-items: center;
+  gap: 3rem;
+  padding: 3.5rem 0 2.75rem;
+}
+
+#keynotes .keynotes-eyebrow {
+  color: #56247a;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+#keynotes h1 {
+  margin: 0.75rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+#keynotes .keynotes-lead {
+  max-width: 35rem;
+  color: #4b5b6d;
+  font-size: 1.125rem;
+}
+
+#keynotes .keynotes-venue {
+  padding-left: 1.5rem;
+  border-left: 3px solid #56247a;
+  font-size: 0.9375rem;
+}
+
+#keynotes .keynotes-venue .keynotes-eyebrow { margin-bottom: 0.5rem; }
+#keynotes .keynotes-venue strong { color: #1a3a6b; }
+#keynotes .keynotes-timezone { margin-top: 0.65rem; }
+
+#keynotes .keynotes-overview {
+  margin-bottom: 3rem;
+  padding: 1.75rem 2rem 1.25rem;
+  border: 1px solid #dce4ee;
+  border-radius: 0.75rem;
+  background: #f5f7fb;
+}
+
+#keynotes .keynotes-overview-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#keynotes .keynotes-overview-heading h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#keynotes .keynotes-link {
+  color: #56247a;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+#keynotes .keynotes-link:hover { color: #1a3a6b; }
+
+#keynotes a:focus-visible {
+  outline: 3px solid #56247a;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+#keynotes .keynotes-days {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+#keynotes .keynotes-day + .keynotes-day {
+  padding-left: 1.5rem;
+  border-left: 1px solid #d6dfeb;
+}
+
+#keynotes .keynotes-day h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+#keynotes .keynotes-day h3 span {
+  display: block;
+  color: #556477;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+#keynotes .keynotes-day ul { list-style: none; padding: 0; }
+
+#keynotes .keynotes-day a {
+  display: grid;
+  grid-template-columns: 6.2rem minmax(0, 1fr);
+  gap: 0.65rem;
+  padding: 0.5rem 0;
+  color: #1a3a6b;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+#keynotes .keynotes-day a:hover span:last-child {
+  color: #56247a;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+#keynotes .keynotes-nav-time {
+  color: #526075;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+#keynotes .keynotes-overview-note {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dce4ee;
+  color: #526075;
+  font-size: 0.875rem;
+}
+
+#keynotes .keynote {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  gap: 3rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #dce4ee;
+  scroll-margin-top: 6rem;
+}
+
+#keynotes .keynote:first-child { margin-top: 0; }
+
+#keynotes .keynote-profile img {
+  display: block;
+  width: 192px;
+  height: 192px;
+  max-width: 100%;
+  margin-bottom: 1.25rem;
+  border-radius: 0.6rem;
+  background: #eef2f7;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+#keynotes .keynote-profile h2 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#keynotes .keynote-affiliation { color: #526075; font-size: 0.9375rem; line-height: 1.65; }
+#keynotes .keynotes-profile-link { display: inline-block; margin-top: 0.75rem; font-size: 0.875rem; }
+
+#keynotes .keynote-schedule {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 0.6fr);
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid #56247a;
+  background: #f5f7fb;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+#keynotes .keynote-schedule dt {
+  margin-bottom: 0.35rem;
+  color: #526075;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+#keynotes .keynote-schedule dd { color: #1a3a6b; font-weight: 600; }
+#keynotes .keynote-time { font-variant-numeric: tabular-nums; }
+#keynotes .keynote-room-code { color: #526075; font-weight: 400; }
+#keynotes .keynote-title-label { margin-top: 1.75rem; margin-bottom: 0.5rem; }
+
+#keynotes .keynote-title {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+}
+
+#keynotes .keynote-text { margin-top: 1.5rem; }
+#keynotes .keynote-text h4 { margin-bottom: 0.5rem; color: #1a3a6b; font-size: 1rem; font-weight: 700; }
+#keynotes .keynote-text p + p { margin-top: 1rem; }
+#keynotes .keynote-biography { padding-top: 1.25rem; border-top: 1px solid #e5eaf1; }
+#keynotes .keynotes-tba { color: #617084; }
+
+#keynotes .keynote-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+
+#keynotes .keynote-footer p { color: #526075; }
+#keynotes .keynotes-note { margin: 3rem 0; color: #526075; font-size: 0.875rem; }
+
+.keynotes-site-footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid #dce4ee;
+  background: #f5f7fb;
+  color: #526075;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 960px) {
+  #keynotes .keynotes-intro { grid-template-columns: minmax(0, 1fr) 18rem; gap: 2rem; }
+  #keynotes .keynotes-day a { grid-template-columns: 1fr; gap: 0; }
+  #keynotes .keynote { grid-template-columns: 11rem minmax(0, 1fr); gap: 2rem; }
+  #keynotes .keynote-profile img { height: auto; aspect-ratio: 1; }
+}
+
+@media (max-width: 700px) {
+  .keynotes-wrapper { padding: 0 1.25rem; }
+  #keynotes .keynotes-intro { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 0; }
+  #keynotes .keynotes-overview { padding: 1.25rem; margin-bottom: 2rem; }
+  #keynotes .keynotes-days { grid-template-columns: 1fr; gap: 1rem; }
+  #keynotes .keynotes-day + .keynotes-day { padding: 1rem 0 0; border-left: 0; border-top: 1px solid #d6dfeb; }
+  #keynotes .keynotes-day h3 span { display: inline; margin-left: 0.5rem; }
+  #keynotes .keynotes-day a { grid-template-columns: 6.2rem minmax(0, 1fr); gap: 0.75rem; }
+  #keynotes .keynote { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2rem; }
+  #keynotes .keynote-profile { display: grid; grid-template-columns: 7rem minmax(0, 1fr); align-items: start; gap: 1.25rem; }
+  #keynotes .keynote-profile img { margin-bottom: 0; }
+  #keynotes .keynote-profile h2 { font-size: 1.125rem; }
+  #keynotes .keynote-schedule { grid-template-columns: minmax(0, 1fr) 6rem; gap: 1rem; padding: 0.875rem 1rem; }
+}
+
+@media (max-width: 380px) {
+  #keynotes .keynote-profile { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; }
+  #keynotes .keynote-schedule { grid-template-columns: 1fr; gap: 0.75rem; }
+}
+
+@media print {
+  .keynotes-menu, .keynotes-skip, .keynotes-overview, .keynotes-site-footer { display: none; }
+  #keynotes { padding-top: 0; }
+  .keynotes-wrapper { width: 100%; padding: 0; }
+  #keynotes .keynotes-intro { padding-top: 0; }
+  #keynotes .keynote { grid-template-columns: 10rem minmax(0, 1fr); gap: 1.5rem; }
+  #keynotes .keynote-profile img { width: 140px; height: 140px; }
+  #keynotes .keynote-profile { display: block; }
+  #keynotes .keynote-title, #keynotes .keynote-text h4 { break-after: avoid; }
+}
