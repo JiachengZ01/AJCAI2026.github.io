@@ -601,7 +601,7 @@ window.PROGRAMME = {
       "id": "phd-forum",
       "type": "forum",
       "start": "14:10",
-      "end": "17:20",
+      "end": "17:30",
       "room": "260-055",
       "chair": "",
       "title": "PhD Forum",
