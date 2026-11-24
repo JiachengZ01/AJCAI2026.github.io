@@ -20,6 +20,26 @@
   };
   let selectedDay = '2026-11-28';
 
+  const encoreUrl = id => `./encore_track.html#${encodeURIComponent(id)}`;
+  const encoreList = get('encore-sessions');
+  if (encoreList) {
+    encoreList.innerHTML = data.sessions.filter(session => session.type === 'encore').map(session => `
+      <details class="programme-group" id="${escape(session.id)}" style="scroll-margin-top: 5rem">
+        <summary>${escape(session.title)} <span>${session.start}–${session.end}</span></summary>
+        ${agendaList(session)}
+      </details>`).join('');
+    function revealSession() {
+      const group = get(location.hash.slice(1));
+      if (group && encoreList.contains(group)) {
+        group.open = true;
+        group.scrollIntoView({ block: 'start' });
+      }
+    }
+    revealSession();
+    window.addEventListener('hashchange', revealSession);
+    return;
+  }
+
   function venueName(session) {
     if (session.venue) return session.venue;
     const room = rooms.get(session.room);
@@ -100,16 +120,17 @@
             : session.agenda
               ? session.agenda.filter(item => item.role).map(item => item.speaker).join(' · ')
               : labels[session.type];
+        const isEncore = session.type === 'encore';
         html += `
-          <button class="programme-session ${escape(session.type)} ${duration <= 30 ? 'compact' : ''}"
-            type="button" data-session="${escape(session.id)}" id="${escape(session.id)}"
+          <${isEncore ? 'a' : 'button'} class="programme-session ${escape(session.type)} ${duration <= 30 ? 'compact' : ''}"
+            ${isEncore ? `href="${encoreUrl(session.id)}"` : `type="button" data-session="${escape(session.id)}"`} id="${escape(session.id)}"
             style="top:${(minutes(session.start) - start) * scale}px;height:${duration * scale - 3}px"
             aria-label="${escape(session.title)}. ${session.start} to ${session.end}. ${escape(venueName(session))}.${session.presenters?.length ? ` Presenters: ${escape(session.presenters.join(', '))}.` : ''}${session.chair ? ` Chair: ${escape(session.chair)}.` : ''} Open details.">
             <span class="programme-session-time">${session.start}–${session.end}</span>
             <span class="programme-session-name">${escape(session.title)}</span>
             <span class="programme-session-meta">${escape(meta)}</span>
             ${session.chair ? `<span class="programme-session-chair">Chair · ${escape(session.chair)}</span>` : ''}
-          </button>`;
+          </${isEncore ? 'a' : 'button'}>`;
       }
       html += '</div>';
     }
@@ -216,6 +237,10 @@
   function jumpToSession(id, focus = '') {
     const session = sessions.get(id);
     if (!session) return;
+    if (session.type === 'encore') {
+      location.assign(encoreUrl(id));
+      return;
+    }
     root.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
     selectedDay = session.date;
     render();
@@ -286,15 +311,10 @@
     button.addEventListener('click', () => get(button.dataset.close).close());
   });
 
-  const encoreSessions = data.sessions.filter(session => session.type === 'encore');
-  get('encore-sessions').innerHTML = encoreSessions.map(session => `
-    <details class="programme-group">
-      <summary>${escape(session.title)} <span>${session.start}–${session.end}</span></summary>
-      <a class="programme-group-jump" data-crosslink="${escape(session.id)}" href="#${escape(session.id)}">View in timetable</a>
-      ${agendaList(session)}
-    </details>`).join('');
-  wireCrosslinks(get('encore-sessions'));
-
+  if (location.hash === '#encore-track') {
+    location.replace('./encore_track.html');
+    return;
+  }
   renderDays();
   render();
   if (sessions.has(location.hash.slice(1))) jumpToSession(location.hash.slice(1));
