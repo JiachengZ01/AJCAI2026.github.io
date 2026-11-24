@@ -6,7 +6,7 @@ window.PROGRAMME = {
   "institution": "University of Auckland",
   "city": "Auckland, New Zealand",
   "timezone": "NZDT (UTC+13)",
-  "updated": "17 November 2026",
+  "updated": "24 November 2026",
   "source_exported_at": "2026-10-13T12:15:44.833Z",
   "days": [
     {
@@ -306,15 +306,77 @@ window.PROGRAMME = {
       "papers": []
     },
     {
-      "id": "encore-am",
+      "id": "encore-1",
       "type": "encore",
       "start": "09:00",
+      "end": "10:00",
+      "room": "260-057",
+      "chair": "",
+      "title": "Encore Session 1 · Adaptation & Optimization",
+      "date": "2026-11-27",
+      "papers": [],
+      "agenda": [
+        {
+          "start": "09:00",
+          "end": "09:20",
+          "title": "RIFormer+: Rethinking Rotation-Invariant Feature Learning in Transformer",
+          "speaker": "Chao Song"
+        },
+        {
+          "start": "09:20",
+          "end": "09:40",
+          "title": "Weight-Space Learning for Certifiable Few-shot Transfer Learning",
+          "speaker": "Henry Gouk"
+        },
+        {
+          "start": "09:40",
+          "end": "10:00",
+          "title": "E-BATS: Efficient Backpropagation-Free Test-Time Adaptation for Speech Foundation Models",
+          "speaker": "Jiaheng Dong"
+        }
+      ]
+    },
+    {
+      "id": "encore-2",
+      "type": "encore",
+      "start": "10:30",
       "end": "12:30",
       "room": "260-057",
       "chair": "",
-      "title": "Encore Track · Part 1",
+      "title": "Encore Session 2 · Adaptation & Optimization",
       "date": "2026-11-27",
-      "papers": []
+      "papers": [],
+      "agenda": [
+        {
+          "start": "10:30",
+          "end": "10:50",
+          "title": "Task-Aware Model Merging via Fisher-Weighted Median",
+          "speaker": "Baban Gain"
+        },
+        {
+          "start": "10:50",
+          "end": "11:10",
+          "title": "Explain the Synth: Interpretable Evaluation of LLM Data Synthesis",
+          "speaker": "Hao Wang"
+        },
+        {
+          "start": "11:10",
+          "end": "11:30",
+          "title": "Combating Data Laundering in LLM Training",
+          "speaker": "Muxing Li"
+        },
+        {
+          "start": "11:30",
+          "end": "11:50",
+          "title": "SSVPO: Effective Step-Level Credit Assignment for RL Training of Language Models",
+          "speaker": "Siyi Hu"
+        },
+        {
+          "start": "11:50",
+          "end": "12:30",
+          "title": "Reserved time for discussion (Q&A)"
+        }
+      ]
     },
     {
       "id": "workshop-am",
@@ -375,15 +437,77 @@ window.PROGRAMME = {
       "papers": []
     },
     {
-      "id": "encore-pm",
+      "id": "encore-3",
       "type": "encore",
       "start": "13:30",
+      "end": "14:50",
+      "room": "260-057",
+      "chair": "",
+      "title": "Encore Session 3 · Multimodality & Applications",
+      "date": "2026-11-27",
+      "papers": [],
+      "agenda": [
+        {
+          "start": "13:30",
+          "end": "13:50",
+          "title": "Why Dedicated Critics: Eliminating Target Drift in Multi-Constraint RL",
+          "speaker": "Hao Wang"
+        },
+        {
+          "start": "13:50",
+          "end": "14:10",
+          "title": "RAIL: Rethinking Auditory Intelligence in Large Audio-Language Models with a CHC-Grounded Benchmark",
+          "speaker": "Hongyu Jin"
+        },
+        {
+          "start": "14:10",
+          "end": "14:30",
+          "title": "CoCoEmo: Composable and Controllable Human-Like Emotional TTS via Activation Steering",
+          "speaker": "Siyi Wang"
+        },
+        {
+          "start": "14:30",
+          "end": "14:50",
+          "title": "Building Large-Scale Drone Defenses from Small-Team Strategies",
+          "speaker": "Grant Douglas"
+        }
+      ]
+    },
+    {
+      "id": "encore-4",
+      "type": "encore",
+      "start": "15:30",
       "end": "17:00",
       "room": "260-057",
       "chair": "",
-      "title": "Encore Track · Part 2",
+      "title": "Encore Session 4 · Multimodality & Applications",
       "date": "2026-11-27",
-      "papers": []
+      "papers": [],
+      "agenda": [
+        {
+          "start": "15:30",
+          "end": "15:50",
+          "title": "An Efficient Transferable Local Explainer for Enhanced Explainability of Tabular Healthcare Data",
+          "speaker": "Rehan Raza"
+        },
+        {
+          "start": "15:50",
+          "end": "16:10",
+          "title": "Interpretable Machine Learning Approach for Identifying Characteristic Type 1 and Type 2 Diabetes Blood Sugar Patterns Through Continuous Glucose Monitor Data",
+          "speaker": "Faris Raza"
+        },
+        {
+          "start": "16:10",
+          "end": "16:30",
+          "title": "Utilizing Hierarchical Efficacy Regions of the Human Brain for Treatment Prediction Through Information Fusion",
+          "speaker": "Wei Lin"
+        },
+        {
+          "start": "16:30",
+          "end": "17:00",
+          "title": "Reserved time for discussion (Q&A)"
+        }
+      ]
     },
     {
       "id": "workshop-pm",
@@ -601,12 +725,105 @@ window.PROGRAMME = {
       "id": "phd-forum",
       "type": "forum",
       "start": "14:10",
-      "end": "17:30",
+      "end": "17:20",
       "room": "260-055",
       "chair": "",
       "title": "PhD Forum",
       "date": "2026-11-28",
-      "papers": []
+      "papers": [],
+      "agenda": [
+        {
+          "start": "14:10",
+          "end": "14:15",
+          "title": "Welcome and introduction",
+          "speaker": "Dr. Xinyu Zhang",
+          "chair": "Dr. Xinyu Zhang"
+        },
+        {
+          "start": "14:15",
+          "end": "14:40",
+          "title": "Invited Talk 1: TBD",
+          "speaker": "Prof. Michael Witbrock",
+          "role": "Invited speaker",
+          "chair": "Dr. Dylan Campbell"
+        },
+        {
+          "start": "14:40",
+          "end": "15:05",
+          "title": "Invited Talk 2: Human Pose Estimation for Individuals with Limb Deficiency",
+          "speaker": "A/Prof. Xin Yu",
+          "role": "Invited speaker",
+          "chair": "Dr. Dylan Campbell"
+        },
+        {
+          "start": "15:05",
+          "end": "15:30",
+          "title": "Invited Talk 3: From Visual Provenance to Scaling Laws for Deepfake Detection",
+          "speaker": "Dr. Wenhao Wang",
+          "role": "Invited speaker",
+          "chair": "Dr. Dylan Campbell"
+        },
+        {
+          "start": "15:30",
+          "end": "16:00",
+          "title": "Afternoon tea"
+        },
+        {
+          "start": "16:00",
+          "end": "16:15",
+          "title": "Student research pitches 1–3 (5 minutes each)",
+          "speaker": "Student presenters",
+          "chair": "Dr. Lia Song"
+        },
+        {
+          "start": "16:15",
+          "end": "16:20",
+          "title": "Q&A",
+          "speaker": "Presenters 1–3",
+          "chair": "Dr. Lia Song"
+        },
+        {
+          "start": "16:20",
+          "end": "16:40",
+          "title": "Student research pitches 4–7 (5 minutes each)",
+          "speaker": "Student presenters",
+          "chair": "Dr. Lia Song"
+        },
+        {
+          "start": "16:40",
+          "end": "16:45",
+          "title": "Q&A",
+          "speaker": "Presenters 4–7",
+          "chair": "Dr. Lia Song"
+        },
+        {
+          "start": "16:45",
+          "end": "17:10",
+          "title": "Panel discussion",
+          "panellists": [
+            "Prof. Michael Witbrock",
+            "A/Prof. Xin Yu",
+            "Dr. Wenhao Wang",
+            "Dr. Dylan Campbell",
+            "Dr. Lia Song"
+          ],
+          "chair": "Dr. Dong Gong"
+        },
+        {
+          "start": "17:10",
+          "end": "17:15",
+          "title": "Best PhD Forum Presentation Award",
+          "speaker": "Dr. Dylan Campbell",
+          "chair": "Dr. Dylan Campbell"
+        },
+        {
+          "start": "17:15",
+          "end": "17:20",
+          "title": "Closing remarks",
+          "speaker": "Dr. Dylan Campbell",
+          "chair": "Dr. Dylan Campbell"
+        }
+      ]
     },
     {
       "id": "oral-1",

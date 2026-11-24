@@ -95,6 +95,8 @@
           ? `${session.papers.length} ${session.type === 'poster' ? 'posters' : 'papers'}${session.type === 'oral' ? ' · 20 min each' : ''}`
           : session.presenters?.length
             ? `Presenters · ${session.presenters.join(', ')}`
+            : session.type === 'encore'
+              ? `${session.agenda.filter(item => item.speaker).length} presentations`
             : session.agenda
               ? session.agenda.filter(item => item.role).map(item => item.speaker).join(' · ')
               : labels[session.type];
@@ -161,6 +163,18 @@
     });
   }
 
+  function agendaList(session) {
+    return `<ol class="programme-paper-list">${session.agenda.map(item => `
+        <li class="programme-paper-row"><span class="programme-paper-time">${item.start}–${item.end}</span>
+          <div><p class="programme-paper-title">${escape(item.title)}</p>
+            ${item.speaker ? `<span class="programme-agenda-speaker">${escape(item.speaker)}${item.role ? ` · <span>${escape(item.role)}</span>` : ''}</span>` : ''}
+            ${item.panellists?.length ? `<p class="programme-muted">Panellists: ${escape(item.panellists.join(', '))}</p>` : ''}
+            ${item.chair ? `<p class="programme-muted">Chair: ${escape(item.chair)}</p>` : ''}
+            ${item.facilitator ? `<p class="programme-muted">Facilitator: ${escape(item.facilitator)}</p>` : ''}
+            ${item.link ? `<a class="programme-paper-link" href="${escape(item.link)}" target="_blank" rel="noopener">LinkedIn ↗</a>` : ''}
+          </div></li>`).join('')}</ol>`;
+  }
+
   function openSession(id, focus = '') {
     const session = sessions.get(id);
     if (!session) return;
@@ -177,15 +191,7 @@
         : 'papers. Each presentation includes 15 minutes for the talk and 5 minutes for questions.'}</p>
         <ol class="programme-paper-list">${paperList(session, focus)}</ol>`;
     } else if (session.agenda) {
-      content += `<ol class="programme-paper-list">${session.agenda.map(item => `
-        <li class="programme-paper-row"><span class="programme-paper-time">${item.start}–${item.end}</span>
-          <div><p class="programme-paper-title">${escape(item.title)}</p>
-            ${item.speaker ? `<span class="programme-agenda-speaker">${escape(item.speaker)}${item.role ? ` · <span>${escape(item.role)}</span>` : ''}</span>` : ''}
-            ${item.panellists?.length ? `<p class="programme-muted">Panellists: ${escape(item.panellists.join(', '))}</p>` : ''}
-            ${item.chair ? `<p class="programme-muted">Chair: ${escape(item.chair)}</p>` : ''}
-            ${item.facilitator ? `<p class="programme-muted">Facilitator: ${escape(item.facilitator)}</p>` : ''}
-            ${item.link ? `<a class="programme-paper-link" href="${escape(item.link)}" target="_blank" rel="noopener">LinkedIn ↗</a>` : ''}
-          </div></li>`).join('')}</ol>`;
+      content += agendaList(session);
     } else if (session.details_url) {
       content += `<p><a class="programme-paper-link" href="${escape(session.details_url)}">Tutorial overview and outline →</a></p>`;
     } else if (session.address) {
@@ -279,6 +285,15 @@
   root.querySelectorAll('[data-close]').forEach(button => {
     button.addEventListener('click', () => get(button.dataset.close).close());
   });
+
+  const encoreSessions = data.sessions.filter(session => session.type === 'encore');
+  get('encore-sessions').innerHTML = encoreSessions.map(session => `
+    <details class="programme-group">
+      <summary>${escape(session.title)} <span>${session.start}–${session.end}</span></summary>
+      <a class="programme-group-jump" data-crosslink="${escape(session.id)}" href="#${escape(session.id)}">View in timetable</a>
+      ${agendaList(session)}
+    </details>`).join('');
+  wireCrosslinks(get('encore-sessions'));
 
   renderDays();
   render();
