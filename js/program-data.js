@@ -742,8 +742,8 @@ window.PROGRAMME = {
         {
           "start": "14:15",
           "end": "14:40",
-          "title": "Invited Talk 1: TBD",
-          "speaker": "Prof. Michael Witbrock",
+          "title": "Invited Talk 1: 3D Visual Character Motion Generation, Reconstruction, and Embodied Agents",
+          "speaker": "Prof. Li Cheng",
           "role": "Invited speaker",
           "chair": "Dr. Dylan Campbell"
         },
@@ -801,7 +801,7 @@ window.PROGRAMME = {
           "end": "17:10",
           "title": "Panel discussion",
           "panellists": [
-            "Prof. Michael Witbrock",
+            "Prof. Li Cheng",
             "A/Prof. Xin Yu",
             "Dr. Wenhao Wang",
             "Dr. Dylan Campbell",
