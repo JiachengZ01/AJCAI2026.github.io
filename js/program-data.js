@@ -742,16 +742,16 @@ window.PROGRAMME = {
         {
           "start": "14:15",
           "end": "14:40",
-          "title": "Invited Talk 1: 3D Visual Character Motion Generation, Reconstruction, and Embodied Agents",
-          "speaker": "Prof. Li Cheng",
+          "title": "Invited Talk 1: Human Pose Estimation for Individuals with Limb Deficiency",
+          "speaker": "A/Prof. Xin Yu",
           "role": "Invited speaker",
           "chair": "Dr. Dylan Campbell"
         },
         {
           "start": "14:40",
           "end": "15:05",
-          "title": "Invited Talk 2: Human Pose Estimation for Individuals with Limb Deficiency",
-          "speaker": "A/Prof. Xin Yu",
+          "title": "Invited Talk 2: 3D Visual Character Motion Generation, Reconstruction, and Embodied Agents",
+          "speaker": "Prof. Li Cheng",
           "role": "Invited speaker",
           "chair": "Dr. Dylan Campbell"
         },
