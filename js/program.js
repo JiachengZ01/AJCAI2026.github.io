@@ -25,7 +25,7 @@
   if (encoreList) {
     encoreList.innerHTML = data.sessions.filter(session => session.type === 'encore').map(session => `
       <details class="programme-group" id="${escape(session.id)}" style="scroll-margin-top: 5rem">
-        <summary>${escape(session.title)} <span>${session.start}–${session.end}</span></summary>
+        <summary>${escape(session.title)} <span>${session.start}–${session.end}</span> · <span>Session chair: ${escape(session.chair)}</span></summary>
         ${agendaList(session)}
       </details>`).join('');
     function revealSession() {
