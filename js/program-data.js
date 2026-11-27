@@ -1905,7 +1905,7 @@ window.PROGRAMME = {
       "end": "13:30",
       "room": "260-071",
       "chair": "",
-      "title": "Lunch",
+      "title": "Lunch & Prize Draw (NZD 300)",
       "date": "2026-11-30",
       "papers": []
     },
@@ -2032,6 +2032,17 @@ window.PROGRAMME = {
           "talk_end": "15:10"
         }
       ]
+    },
+    {
+      "id": "afternoon-tea-30",
+      "type": "break",
+      "start": "15:10",
+      "end": "15:40",
+      "room": "260-071",
+      "chair": "",
+      "title": "Afternoon Tea",
+      "date": "2026-11-30",
+      "papers": []
     }
   ],
   "counts": {
